@@ -1,16 +1,16 @@
 # Projet POEC JAVA CLERMONT 2022 - ACCSetup
 
-##Description :
+## Description :
 
 L'application permet, via une base de données technique (voitures, circuits) à un utilisateur enregistré de créer des sessions de roulage (qui sont une classe Java)
 auxquelles sont liées des valeurs de réglage de la voiture (classe Java).
 
-##Scénario d'utilisation :
+## Scénario d'utilisation :
 
 - Connexion de l'utilisateur.
 - L'utilisateur accède à un menu permettant de gérer les sessions liées à son compte d'utilisateur : consulter une session existant, créer une nouvelle session, mettre à jour une session existant, supprimer une session.
 
-##Scénario de création de session :
+## Scénario de création de session :
 
 Via le menu principal, l'utilisateur enregistré clique sur le bouton "créer une session".
 
@@ -18,7 +18,7 @@ Il accède à un premier menu, où il choisit la voiture et la piste sur laquell
 
 Il accède à un second menu, où il a accès aux valeurs de la classe réglage qu'il peut modifier. Une foix ces choix faits, il peut sauvegarder son réglage avec un bouton "sauvegarder réglage".
 
-##Fonctions de l'application :
+## Fonctions de l'application :
 
 - Un utilisateur peut se connecter/déconnecter avec un identifiant/mot de passe sécurisé. (PRIO 0)
 
