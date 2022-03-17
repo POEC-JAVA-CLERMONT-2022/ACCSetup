@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6650300-d712-40d7-bcc1-99487ff38fb1" name="Changes" comment="Mise à jour architecture projet">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ACCSetup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ACCSetup.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/ACCsetupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/ACCsetupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Condition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/SessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Setup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/SetupCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/SetupCondition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/SetupWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/SetupWeather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="c6650300-d712-40d7-bcc1-99487ff38fb1" name="Changes" comment="Mise à jour architecture projet" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +93,7 @@
       <workItem from="1647502630353" duration="262000" />
       <workItem from="1647506894271" duration="760000" />
       <workItem from="1647507732739" duration="6986000" />
-      <workItem from="1647522528159" duration="4236000" />
+      <workItem from="1647522528159" duration="4539000" />
     </task>
     <task id="LOCAL-00001" summary="Mise à jour architecture projet">
       <created>1647510141197</created>
