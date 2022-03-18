@@ -1,4 +1,4 @@
-package ipme.projet.ACCsetup.test.application;
+package com.ipme.poec.ACCSetup;
 
 public class SetupService {
 	
