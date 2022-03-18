@@ -9,7 +9,7 @@ public class Condition {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int trackconditionId;
 
-    @Column
+    @Column (name = "trackconditionNAME")
     private String trackconditionName;
 
 
