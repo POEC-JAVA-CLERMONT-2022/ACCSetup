@@ -1,4 +1,4 @@
-package com.ipme.poec.ACCSetup;
+package com.ipme.poec.ACCSetup.Model;
 
 public class User {
 
