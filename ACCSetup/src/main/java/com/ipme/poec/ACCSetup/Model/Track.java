@@ -5,8 +5,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "track")
 public class Track {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "trackID", length = 11)
     private int trackId;
 
     @Column(name = "trackNAME")

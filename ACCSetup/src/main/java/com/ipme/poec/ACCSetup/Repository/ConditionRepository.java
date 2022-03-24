@@ -1,6 +1,13 @@
 package com.ipme.poec.ACCSetup.Repository;
 
-import org.springframework.data.repository.CrudRepository;
+import com.ipme.poec.ACCSetup.Model.Condition;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
-public interface ConditionRepository extends CrudRepository {
+public interface ConditionRepository extends JpaRepository<Condition, Integer> {
+
+//    @Query("SELECT c FROM Condition c WHERE c.trackConditionId = :id")
+//    Condition findById(@Param("conditionID") Condition conditionId);
+
 }

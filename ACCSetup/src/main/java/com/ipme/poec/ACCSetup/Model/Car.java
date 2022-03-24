@@ -1,28 +1,48 @@
 package com.ipme.poec.ACCSetup.Model;
 
+import com.sun.istack.NotNull;
+
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "car")
 public class Car {
 
-	private Double carId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "carID", length = 11)
+	private int carId;
+
+	@Column(name = "carNAME", length = 100)
+	@NotNull
 	private String carName;
-	public Car(Double carId, String carName) {
+
+	public Car(String carName) {
 		super();
-		this.carId = carId;
 		this.carName = carName;
 	}
-	public Double getCarId() {
+
+	public Car() {
+
+	}
+
+
+
+	public int getCarId() {
 		return carId;
 	}
-	public void setCarId(Double carId) {
+	public void setCarId(int carId) {
 		this.carId = carId;
 	}
+
 	public String getCarName() {
 		return carName;
 	}
 	public void setCarName(String carName) {
 		this.carName = carName;
 	}
+
 	@Override
 	public String toString() {
 		return "Car [carId=" + carId + ", carName=" + carName + "]";

@@ -1,8 +1,17 @@
 package com.ipme.poec.ACCSetup.Model;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "setup")
 public class Setup {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "setupID", length = 11)
     private int setupId;
+
     private float setupFLPsi;
     private float setupFRPsi;
     private float setupRLPsi;
@@ -18,6 +27,12 @@ public class Setup {
     private float setupFLCaster;
     private float setupFRCaster;
     private String setupDesc;
+
+    @ManyToMany
+    private List<Weather> weathers;
+
+    @ManyToMany
+    private List<Condition> conditions;
 
     public Setup(int setupId, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc) {
         this.setupId = setupId;
@@ -36,6 +51,10 @@ public class Setup {
         this.setupFLCaster = setupFLCaster;
         this.setupFRCaster = setupFRCaster;
         this.setupDesc = setupDesc;
+    }
+
+    public Setup() {
+
     }
 
     public int getSetupId() {

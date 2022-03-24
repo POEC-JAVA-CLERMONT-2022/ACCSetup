@@ -1,41 +1,42 @@
 package com.ipme.poec.ACCSetup.Model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "trackCondition")
+@Table(name = "trackcondition")
 public class Condition {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int trackconditionId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "trackconditionID")
+    private int trackConditionId;
 
-    @Column (name = "trackconditionNAME")
-    private String trackconditionName;
+    @Column (name = "trackconditionNAME", length = 20)
+    @NotNull
+    private String trackConditionName;
 
 
-    public Condition(int trackconditionId, String trackconditionName) {
-        this.trackconditionId = trackconditionId;
-        this.trackconditionName = trackconditionName;
+    public Condition(String trackConditionName) {
+        this.trackConditionName = trackConditionName;
     }
+
 
     public Condition() {
 
     }
 
-    public int getTrackconditionId() {
-        return trackconditionId;
+    public int getTrackConditionId() {
+        return trackConditionId;
     }
 
-    public void setTrackconditionId(int trackconditionId) {
-        this.trackconditionId = trackconditionId;
+    public String getTrackConditionName() {
+        return trackConditionName;
     }
 
-    public String getTrackconditionName() {
-        return trackconditionName;
-    }
-
-    public void setTrackconditionName(String trackconditionName) {
-        this.trackconditionName = trackconditionName;
+    public void setTrackConditionName(String trackConditionName) {
+        this.trackConditionName = trackConditionName;
     }
 
     @Override
@@ -45,11 +46,11 @@ public class Condition {
 
         Condition condition = (Condition) o;
 
-        return trackconditionId == condition.trackconditionId;
+        return trackConditionId == condition.trackConditionId;
     }
 
     @Override
     public int hashCode() {
-        return trackconditionId;
+        return trackConditionId;
     }
 }

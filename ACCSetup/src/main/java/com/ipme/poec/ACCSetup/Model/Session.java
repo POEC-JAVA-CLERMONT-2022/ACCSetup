@@ -1,24 +1,34 @@
 package com.ipme.poec.ACCSetup.Model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "session")
 public class Session {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sessionID")
     private int sessionId;
+
+    @Column(name = "sessionNAME")
     private String sessionName;
+
+    @Column(name = "sessionDATE")
     private LocalDate sessionDate;
 
-    public Session(int sessionId, String sessionName, LocalDate sessionDate) {
-        this.sessionId = sessionId;
+    public Session(String sessionName, LocalDate sessionDate) {
         this.sessionName = sessionName;
         this.sessionDate = sessionDate;
     }
 
-    public int getSessionID() {
-        return sessionId;
+    public Session() {
+
     }
 
-    public void setSessionID(int sessionID) {
-        this.sessionId = sessionID;
+    public int getSessionID() {
+        return sessionId;
     }
 
     public String getSessionName() {
