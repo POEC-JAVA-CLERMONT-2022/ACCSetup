@@ -11,6 +11,20 @@ public class DisplayService {
 		System.out.println("|                                       |");
 		System.out.println("|         - 'connect' for sign -        |");
 		System.out.println("+---------------------------------------+");
-
+	}
+	
+	public void displayHomeMenu() {
+		System.out.println("+---------------------------------------+");
+		System.out.println("|               HOME MENU               |");
+		System.out.println("+---------------------------------------+");
+		System.out.println("|  1) ACCOUNT                           |");
+		System.out.println("|  2) LOGOUT                            |");
+		System.out.println("|  3) SESSION LIST                      |");
+		System.out.println("|  4) CREATE A NEW SESSION              |");
+		System.out.println("|                                       |");
+		System.out.println("|         - Make your choise -          |");
+		System.out.println("|       - or 'quit' for close -         |");
+		System.out.println("+---------------------------------------+");
+		System.out.println("- Make your choise or 'quit' for close -");
 	}
 }
