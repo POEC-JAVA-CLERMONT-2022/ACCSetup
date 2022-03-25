@@ -2,6 +2,15 @@ package com.ipme.poec.ACCSetup.Service;
 
 public class DisplayService {
 
-	// comment afficher les pages
+
 	
+	public void displayDisconnectHome() {
+		System.out.println("+---------------------------------------+");
+		System.out.println("|          Welcome to ACCsetup          |");
+		System.out.println("+---------------------------------------+");
+		System.out.println("|                                       |");
+		System.out.println("|         - 'connect' for sign -        |");
+		System.out.println("+---------------------------------------+");
+
+	}
 }
