@@ -9,6 +9,7 @@ public class ACCsetupService {
 	public void run() {
 		DisplayService displayService = new DisplayService();
 		displayService.displayDisconnectHome();
+		displayService.displayHomeMenu();
 		
 		}
 	
