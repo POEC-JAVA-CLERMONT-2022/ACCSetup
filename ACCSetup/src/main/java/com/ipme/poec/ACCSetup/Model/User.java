@@ -12,18 +12,16 @@ public class User {
     @Column(name = "userID", length = 11)
     private int userId;
 
+    @Column(name = "user_name", length = 255)
     private String userName;
+
+    @Column(name = "user_password", length = 255)
     private String userPassword;
 
     @OneToMany
     @JoinColumn(name = "userId")
     private List<Session> sessions;
 
-    public User(int userId, String userName, String userPassword) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userPassword = userPassword;
-    }
 
     public User(int userId, String userName, String userPassword, List<Session> sessions) {
         this.userId = userId;

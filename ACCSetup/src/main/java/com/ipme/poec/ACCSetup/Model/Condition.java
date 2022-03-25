@@ -10,7 +10,7 @@ import java.util.List;
 public class Condition {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "trackconditionID")
+    @Column(name = "trackconditionID", length = 11)
     private int trackConditionId;
 
     @Column (name = "trackconditionNAME", length = 20)
