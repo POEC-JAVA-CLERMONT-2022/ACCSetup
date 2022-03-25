@@ -12,20 +12,35 @@ public class Setup {
     @Column(name = "setupID", length = 11)
     private int setupId;
 
+    @Column(name = "setupflpsi")
     private float setupFLPsi;
+    @Column(name = "setupfrpsi")
     private float setupFRPsi;
+    @Column(name = "setuplpsi")
     private float setupRLPsi;
+    @Column(name = "setuprrpsi")
     private float setupRRPsi;
+    @Column(name = "setupfltoe")
     private float setupFLToe;
+    @Column(name = "setupfrtoe")
     private float setupFRToe;
+    @Column(name = "setuprltoe")
     private float setupRLToe;
+    @Column(name = "setuprrtoe")
     private float setupRRToe;
+    @Column(name = "setupflcamber")
     private float setupFLCamber;
+    @Column(name = "setupfrcamber")
     private float setupFRCamber;
+    @Column(name = "setuprlcamber")
     private float setupRLCamber;
+    @Column(name = "setuprrcamber")
     private float setupRRCamber;
+    @Column(name = "setupflcaster")
     private float setupFLCaster;
+    @Column(name = "setupfrcaster")
     private float setupFRCaster;
+    @Column(name = "setup_desc")
     private String setupDesc;
 
     @ManyToMany
@@ -34,7 +49,11 @@ public class Setup {
     @ManyToMany
     private List<Condition> conditions;
 
-    public Setup(int setupId, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc) {
+    @ManyToOne
+    @JoinColumn(name = "sessionid",nullable = false)
+    private Session session;
+
+    public Setup(int setupId, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc, List<Weather> weathers, List<Condition> conditions, Session session) {
         this.setupId = setupId;
         this.setupFLPsi = setupFLPsi;
         this.setupFRPsi = setupFRPsi;
@@ -51,6 +70,9 @@ public class Setup {
         this.setupFLCaster = setupFLCaster;
         this.setupFRCaster = setupFRCaster;
         this.setupDesc = setupDesc;
+        this.weathers = weathers;
+        this.conditions = conditions;
+        this.session = session;
     }
 
     public Setup() {
@@ -183,6 +205,31 @@ public class Setup {
 
     public void setSetupDesc(String setupDesc) {
         this.setupDesc = setupDesc;
+    }
+
+
+    public List<Weather> getWeathers() {
+        return weathers;
+    }
+
+    public void setWeathers(List<Weather> weathers) {
+        this.weathers = weathers;
+    }
+
+    public List<Condition> getConditions() {
+        return conditions;
+    }
+
+    public void setConditions(List<Condition> conditions) {
+        this.conditions = conditions;
+    }
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
     }
 
     @Override

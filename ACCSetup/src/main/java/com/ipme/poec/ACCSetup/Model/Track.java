@@ -8,10 +8,10 @@ public class Track {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "trackID", length = 11)
+    @Column(name = "trackid", length = 11)
     private int trackId;
 
-    @Column(name = "trackNAME")
+    @Column(name = "trackname", length = 255)
     private String trackName;
 
     public Track(int trackId, String trackName) {
