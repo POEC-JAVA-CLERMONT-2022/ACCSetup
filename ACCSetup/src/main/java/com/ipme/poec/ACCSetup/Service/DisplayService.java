@@ -13,4 +13,8 @@ public class DisplayService {
 		System.out.println("+---------------------------------------+");
 
 	}
+	
+	public void displaySetup() {
+		
+	}
 }
