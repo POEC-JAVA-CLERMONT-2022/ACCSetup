@@ -13,6 +13,7 @@ public class Weather {
     @Column(name = "weatherID", length = 11)
     private int weatherId;
 
+    @Column(name = "weather_name", length = 255)
     private String weatherName;
 
 
