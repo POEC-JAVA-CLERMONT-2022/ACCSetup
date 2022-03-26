@@ -13,6 +13,23 @@ public class DisplayService {
 		System.out.println("+---------------------------------------+");
 	}
 	
+	public void displaySignIn() {
+		System.out.println("+---------------------------------------+");
+		System.out.println("|               SIGN IN                 |");
+		System.out.println("+---------------------------------------+");
+		System.out.println("|                                       |");
+		System.out.println("|  USER NAME                            |");
+		System.out.println("|  _______________                      |");
+		System.out.println("|                                       |");
+		System.out.println("|  PASSWORD                             |");
+		System.out.println("|  _______________                      |");
+		System.out.println("|                                       |");
+		System.out.println("|       - 'sign in' for enter -         |");
+		System.out.println("|   - 'sign out' create new account -   |");
+		System.out.println("|       - or 'quit' for close -         |");
+		System.out.println("+---------------------------------------+");
+	}
+	
 	public void displayHomeMenu() {
 		System.out.println("+---------------------------------------+");
 		System.out.println("|               HOME MENU               |");
@@ -25,8 +42,8 @@ public class DisplayService {
 		System.out.println("|         - Make your choise -          |");
 		System.out.println("|       - or 'quit' for close -         |");
 		System.out.println("+---------------------------------------+");
-		System.out.println("- Make your choise or 'quit' for close -");
 	}
+	
 	
 	
 	
