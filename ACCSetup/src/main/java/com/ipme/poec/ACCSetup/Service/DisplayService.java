@@ -24,9 +24,26 @@ public class DisplayService {
 		System.out.println("|  PASSWORD                             |");
 		System.out.println("|  _______________                      |");
 		System.out.println("|                                       |");
-		System.out.println("|       - 'sign in' for enter -         |");
-		System.out.println("|   - 'sign out' create new account -   |");
+		System.out.println("|         - 'in' for enter -            |");
+		System.out.println("|     - 'up' create new account -       |");
 		System.out.println("|       - or 'quit' for close -         |");
+		System.out.println("+---------------------------------------+");
+	}
+	
+	public void displaySignUp() {
+		System.out.println("+---------------------------------------+");
+		System.out.println("|               SIGN UP                 |");
+		System.out.println("+---------------------------------------+");
+		System.out.println("|                                       |");
+		System.out.println("|  EMAIL                                |");
+		System.out.println("|  _______________                      |");
+		System.out.println("|                                       |");
+		System.out.println("|  USER NAME                            |");
+		System.out.println("|  _______________                      |");
+		System.out.println("|                                       |");
+		System.out.println("|  PASSWORD                             |");
+		System.out.println("|  _______________                      |");
+		System.out.println("|                                       |");
 		System.out.println("+---------------------------------------+");
 	}
 	
