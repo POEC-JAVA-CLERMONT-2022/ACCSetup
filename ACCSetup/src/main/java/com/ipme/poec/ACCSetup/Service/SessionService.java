@@ -1,19 +1,32 @@
 package com.ipme.poec.ACCSetup.Service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ipme.poec.ACCSetup.Model.Session;
+import com.ipme.poec.ACCSetup.Repository.CarRepository;
+import com.ipme.poec.ACCSetup.Repository.SessionRepository;
+import com.ipme.poec.ACCSetup.Repository.TrackRepository;
+
+@Service
 public class SessionService {
 
-	// g�rer le management des sessions 
+
+	@Autowired
+	private SessionRepository sessionRepository;
 	
-	// m�thode cr�ation de session, entrer nom/date/...
+	@Autowired
+	private CarRepository carRepository;
 	
-	// m�thode de copie de session
+	@Autowired
+	private TrackRepository trackRepository;
 	
-	// m�thode de recherche de session (pas prioritaire)
 	
-	// m�thode de liste des sessions (prioritaire)
+	public List<Session> findAll() {
+		return sessionRepository.findAll();
+	}
 	
-	// m�thode d'�dition de session, modifier , enregistrer , enregistrer-sous
-	
-	// m�thode suppression de session
 	
 }

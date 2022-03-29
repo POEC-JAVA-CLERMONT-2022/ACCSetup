@@ -78,6 +78,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager">
@@ -108,6 +111,8 @@
       <workItem from="1648116676911" duration="4442000" />
       <workItem from="1648127537415" duration="9115000" />
       <workItem from="1648194403047" duration="6845000" />
+      <workItem from="1648451061578" duration="6000" />
+      <workItem from="1648536553887" duration="916000" />
     </task>
     <task id="LOCAL-00001" summary="Mise à jour architecture projet">
       <created>1647510141197</created>
