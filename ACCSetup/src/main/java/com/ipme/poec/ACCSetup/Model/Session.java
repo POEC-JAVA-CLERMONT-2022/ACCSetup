@@ -1,6 +1,11 @@
 package com.ipme.poec.ACCSetup.Model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
 import java.time.LocalDate;
 
 @Entity
@@ -13,25 +18,35 @@ public class Session {
     private int sessionId;
 
     @Column(name = "sessionname", length = 255)
+    @NotNull
+    @NotBlank(message = "La nom de session est obligatoire")
     private String sessionName;
 
     @Column(name = "sessiondate")
+    @NotNull
+    @PastOrPresent
+    @DateTimeFormat(pattern = "dd.MM.yyyy")
     private LocalDate sessionDate;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "trackid")
     private Track track;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "carid")
     private Car car;
 
-    public Session(int sessionId, String sessionName, LocalDate sessionDate, Track track, Car car) {
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
+
+    public Session(int sessionId, String sessionName, LocalDate sessionDate, Track track, Car car,User user) {
         this.sessionId = sessionId;
         this.sessionName = sessionName;
         this.sessionDate = sessionDate;
         this.track = track;
         this.car = car;
+        this.user = user;
     }
 
     public Session() {
@@ -80,6 +95,14 @@ public class Session {
 
     public void setCar(Car car) {
         this.car = car;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

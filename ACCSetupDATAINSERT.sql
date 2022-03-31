@@ -9,6 +9,4 @@ INSERT INTO car (carid,carname) VALUES (1,'Alpine A110 GT4'),(2,'Aston Martin Va
 (6,'Audi R8 LMS Evo'),(7,'Audi R8 LMS GT4'),(8,'Bentley Continental GT3'),(9,'Bentley Continental GT3 2015'),(10,'Bentley Continental GT3 2018'),(11,'BMW M6 GT3'),(12,'BMW M4 GT4'),
 (13,'Chevrolet Camaro GT4R'),(14,'Ferrari 488 GT3'),(15,'Ginetta  G55 GT4'),(16,'Honda NSX GT3'),(17,'Honda NSX GT3 Evo'),(18,'Jaguar Emil Frey Jaguar GT3'),(19,'KTM X-Bow GT4'),
 (20,'Lamborghini Huracan GT3 Evo'),(21,'Lamborghini Lamborghini Huracan ST'),(22,'Lamborghini Huracan GT3'),(23,'Lexus RC F GT3'),(24,'Maserati MC GT4'),  (25,'McLaren 650S GT3'),
-(26,'McLaren 720S GT3'),(27,'Mclaren 570S GT4'),(28,'Mercedes AMG GT4'),(29,'Mercedes-AMG GT3'),(30,'Nissan GT-R Nismo GT3'),(31,'Nissan GT-R Nismo GT3 2015'),(32,'Nissan GT-R Nismo GT3 2018'),
-
-INSERT INTO trackcondition (trackconditionid,trackconditionname) VALUES (1,'OPTIMAL'),(2,'FAST'),(3,'GREEN'),(4,'GREASY'),(5,'DAMP'),(6,'WET'),(7,'FLOODED');
+(26,'McLaren 720S GT3'),(27,'Mclaren 570S GT4'),(28,'Mercedes AMG GT4'),(29,'Mercedes-AMG GT3'),(30,'Nissan GT-R Nismo GT3'),(31,'Nissan GT-R Nismo GT3 2015'),(32,'Nissan GT-R Nismo GT3 2018');
