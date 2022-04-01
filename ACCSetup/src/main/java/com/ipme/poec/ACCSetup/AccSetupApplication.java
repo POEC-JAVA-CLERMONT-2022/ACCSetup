@@ -33,13 +33,12 @@ public class AccSetupApplication {
 
 	}
 
-	@EventListener(classes = {ApplicationStartedEvent.class})
-	public void applicationStarted() {
-		System.out.println("Application démarée");
-		User user = new User("p","b");
-		userService.createUser(user);
-
-	}
+//	@EventListener(classes = {ApplicationStartedEvent.class})
+//	public void applicationStarted() {
+//		System.out.println("Application démarée");
+//		User user = new User("p","b");
+//		userService.createUser(user);
+//	}
 
 
 

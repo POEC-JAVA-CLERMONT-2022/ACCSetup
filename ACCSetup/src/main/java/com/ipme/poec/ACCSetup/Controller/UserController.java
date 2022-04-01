@@ -28,12 +28,9 @@ public class UserController {
         return userService.findAll();
     }
 
-    @EventListener(classes = {ApplicationStartedEvent.class}) //méthode qui se lance au départ de l'application
     @PostMapping("users/add")   //mapping de la méthode
-    public void createUser(){
-        System.out.println("Application démarée");
-        User user = new User("Patrick","Balkany");
-        userService.createUser(user);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
+    public void createUser(String name, String password){
+        userService.createUser(name,password);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
     }
 
 //    @PostMapping("users/add")

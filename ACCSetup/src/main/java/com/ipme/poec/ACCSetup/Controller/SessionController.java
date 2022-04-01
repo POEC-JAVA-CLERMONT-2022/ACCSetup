@@ -44,15 +44,9 @@ public class SessionController {
 
     @EventListener(classes = {ApplicationStartedEvent.class}) //méthode qui se lance au départ de l'application
     @PostMapping("/sessions")
-    public void createSession(){
+    public void createSession(Track track, Car car, User user, Integer trackId, Integer carId, Integer userId){
 
-
-        Track track = sessionService.getTrackById(1);
-        Car car = sessionService.getCarById(1);
-        User user = userService.getById(1);
-        Session session = new Session(1,"Test", LocalDate.now(),track,car,user);
-        sessionService.createSession(session);
-        System.out.println("Session démarrée");
+    sessionService.createSession(track,car,user,trackId,carId,userId);
 
     }
 

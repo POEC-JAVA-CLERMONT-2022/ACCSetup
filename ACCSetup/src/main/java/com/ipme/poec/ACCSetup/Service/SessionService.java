@@ -1,5 +1,6 @@
 package com.ipme.poec.ACCSetup.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,10 @@ public class SessionService {
 		return sessionRepository.findAll();
 	}
 
+	public List<Car> findAllCars() { return carRepository.findAll(); }
+
+	public List<Track> findAllTracks() { return trackRepository.findAll(); }
+
 	public Optional<Session> findSessionById(Integer id) { return sessionRepository.findById(id); } //méthode pour obtenir un user selon son userId
 
 	public Session getSessionById(Integer id) { return sessionRepository.getById(id); }
@@ -50,7 +55,19 @@ public class SessionService {
 
 	public User getUserById(Integer id) { return userRepository.getById(id);} //méthode pour récupérer un user, qui est forcément lié à une session
 
-	public void createSession(Session session) { sessionRepository.saveAndFlush(session); } //méthode de création d'un user
+//	public void createSession(Session session) { sessionRepository.saveAndFlush(session); } //méthode de création d'un user
+
+	public void createSession(Track track, Car car, User user, Integer trackId, Integer carId, Integer userId) {
+
+		track = trackRepository.getById(trackId);
+		car = carRepository.getById(carId);
+		user = userRepository.getById(userId);
+		Session session = new Session();
+		session.setCar(car);
+		session.setTrack(track);
+		session.setUser(user);
+
+		sessionRepository.saveAndFlush(session); }
 
 	public void deleteSession(Integer id) { sessionRepository.deleteById(id); } //méthode de suppression d'un user, selon son userId
 
