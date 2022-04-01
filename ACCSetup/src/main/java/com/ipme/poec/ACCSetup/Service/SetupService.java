@@ -31,9 +31,9 @@ public class SetupService {
 
     public Setup getSetupById(Integer id) { return setupRepository.getById(id);}
 
-    public List<Condition> findAllConditions(Integer id) {return conditionRepository.findAll();}
+    public List<Condition> findAllConditions() {return conditionRepository.findAll();}
 
-    public List<Weather> findAllWeathers(Integer id) { return weatherRepository.findAll();}
+    public List<Weather> findAllWeathers() { return weatherRepository.findAll();}
 
     public Weather getWeatherById(Integer id) { return weatherRepository.getById(id);}
 

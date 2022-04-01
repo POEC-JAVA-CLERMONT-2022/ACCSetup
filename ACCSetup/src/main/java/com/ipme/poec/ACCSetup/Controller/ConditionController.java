@@ -27,5 +27,4 @@ public class ConditionController {
         return setupService.findAllConditions();
     }
 
-
 }
