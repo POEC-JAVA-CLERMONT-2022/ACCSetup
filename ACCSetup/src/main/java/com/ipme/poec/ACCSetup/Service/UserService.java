@@ -27,6 +27,7 @@ public class UserService {
 
 	public User getById(Integer id) { return userRepository.getById(id);}
 
+
 //	public void createUser(User user) { userRepository.saveAndFlush(user); } //méthode de création d'un user
 
 	public void createUser(String name, String password) {
@@ -35,12 +36,16 @@ public class UserService {
 		user.setUserPassword(password);
 		userRepository.saveAndFlush(user); }
 
+	public void saveUser(User user) {userRepository.saveAndFlush(user);}
+
 //	public void connectUser(String name, String password) {
 //		User user =  new User (name,password);
 //		userRepository.getById();
 //	}
 
 	public void deleteUser(Integer id) { userRepository.deleteById(id); } //méthode de suppression d'un user, selon son userId
+
+	public void deleteAllUsers() { userRepository.deleteAll(); } //Suppression de tous les users
 
 	public void updateUser(User user, Integer id) {
 		User userToUpdate = userRepository.getById(id);

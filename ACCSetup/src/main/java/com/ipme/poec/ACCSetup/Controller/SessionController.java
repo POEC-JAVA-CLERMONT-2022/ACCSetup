@@ -42,7 +42,6 @@ public class SessionController {
     }
 
 
-    @EventListener(classes = {ApplicationStartedEvent.class}) //méthode qui se lance au départ de l'application
     @PostMapping("/sessions")
     public void createSession(Track track, Car car, User user, Integer trackId, Integer carId, Integer userId){
 
