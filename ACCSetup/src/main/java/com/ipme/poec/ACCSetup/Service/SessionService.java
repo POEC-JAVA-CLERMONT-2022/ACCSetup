@@ -57,12 +57,16 @@ public class SessionService {
 
 //	public void createSession(Session session) { sessionRepository.saveAndFlush(session); } //méthode de création d'un user
 
-	public void createSession(Track track, Car car, User user, Integer trackId, Integer carId, Integer userId) {
-
+	public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
+		Integer trackId = null;
+		Integer carId = null;
+		Integer userId = null;
 		track = trackRepository.getById(trackId);
 		car = carRepository.getById(carId);
 		user = userRepository.getById(userId);
 		Session session = new Session();
+		session.setSessionName(sessionName);
+		session.setSessionDate(sessionDate);
 		session.setCar(car);
 		session.setTrack(track);
 		session.setUser(user);

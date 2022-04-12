@@ -42,11 +42,10 @@ public class SessionController {
     }
 
 
-    @EventListener(classes = {ApplicationStartedEvent.class}) //méthode qui se lance au départ de l'application
     @PostMapping("/sessions")
-    public void createSession(Track track, Car car, User user, Integer trackId, Integer carId, Integer userId){
+    public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user){
 
-    sessionService.createSession(track,car,user,trackId,carId,userId);
+    sessionService.createSession(sessionName,sessionDate,track,car,user);
 
     }
 

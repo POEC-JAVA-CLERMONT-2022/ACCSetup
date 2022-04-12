@@ -35,6 +35,10 @@ public class UserService {
 		user.setUserPassword(password);
 		userRepository.saveAndFlush(user); }
 
+	public void saveUser(User user) {
+		userRepository.saveAndFlush(user);
+	}
+
 //	public void connectUser(String name, String password) {
 //		User user =  new User (name,password);
 //		userRepository.getById();
