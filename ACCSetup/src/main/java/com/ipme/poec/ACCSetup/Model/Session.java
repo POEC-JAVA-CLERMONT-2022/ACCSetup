@@ -33,12 +33,20 @@ public class Session {
     private Track track;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "carid")
+    @JoinColumn(name = "carID")
     private Car car;
 
     @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
+
+    public Session(String sessionName, LocalDate sessionDate, Track track, Car car,User user) {
+        this.sessionName = sessionName;
+        this.sessionDate = sessionDate;
+        this.track = track;
+        this.car = car;
+        this.user = user;
+    }
 
     public Session(int sessionId, String sessionName, LocalDate sessionDate, Track track, Car car,User user) {
         this.sessionId = sessionId;

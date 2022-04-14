@@ -22,6 +22,10 @@ public class Condition {
         this.trackConditionName = trackConditionName;
     }
 
+    public Condition(int trackConditionId, String trackConditionName) {
+        this.trackConditionId = trackConditionId;
+        this.trackConditionName = trackConditionName;
+    }
 
     public Condition() {
 

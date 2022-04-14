@@ -23,10 +23,14 @@ public class Car {
 		this.carName = carName;
 	}
 
+	public Car(int carId, String carName) {
+		this.carId = carId;
+		this.carName = carName;
+	}
+
 	public Car() {
 
 	}
-
 
 
 	public int getCarId() {
