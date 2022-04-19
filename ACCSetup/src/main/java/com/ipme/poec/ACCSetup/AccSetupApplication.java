@@ -5,6 +5,7 @@ import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Repository.SessionRepository;
 import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import com.ipme.poec.ACCSetup.Service.*;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +16,11 @@ import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
 public class AccSetupApplication {
+
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
+	}
 
 	@Autowired
 	private SessionService sessionService;
