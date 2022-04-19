@@ -34,6 +34,8 @@ public class SetupController {
         setupService.createSetup(weatherIds,conditionIds,id);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
     }
 
+
+
 //    @ResponseStatus(HttpStatus.BAD_REQUEST)
 //    @ExceptionHandler(MethodArgumentNotValidException.class)
 //    public Map<String, String> handleValidationExceptions(

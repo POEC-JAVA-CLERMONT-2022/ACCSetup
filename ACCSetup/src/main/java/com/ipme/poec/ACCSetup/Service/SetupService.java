@@ -33,7 +33,11 @@ public class SetupService {
 
     public List<Condition> findAllConditions() {return conditionRepository.findAll();}
 
+    public Condition saveCondition(Condition condition) {return  conditionRepository.saveAndFlush(condition);}
+
     public List<Weather> findAllWeathers() { return weatherRepository.findAll();}
+
+    public Weather saveWeather (Weather weather) {return  weatherRepository.saveAndFlush(weather);}
 
     public Weather getWeatherById(Integer id) { return weatherRepository.getById(id);}
 
@@ -43,7 +47,7 @@ public class SetupService {
 
     public Condition getConditionById(Integer id) { return conditionRepository.getById(id);}
 
-    public void createSetup(List<Integer> weatherIds, List<Integer> conditionIds, Integer id) {
+    public void createSetup(List<Integer> weatherIds, List<Integer> conditionIds, Integer sessionId) {
 
 
         List<Weather> weathers = new LinkedList<>(); //on initialise une liste de météos
@@ -52,7 +56,7 @@ public class SetupService {
         List<Condition> conditions = new LinkedList<>();
         conditions = conditionRepository.findByIdsIn(conditionIds);
 
-        Session session = sessionRepository.getById(id);
+        Session session = sessionRepository.getById(sessionId);
         Setup setup = new Setup();
         setup.setConditions(conditions);
         setup.setWeathers(weathers);
