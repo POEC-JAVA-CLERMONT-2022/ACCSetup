@@ -33,7 +33,6 @@ public class UserService {
         return userRepository.getById(id);
     }
 
-
 //	public void createUser(User user) { userRepository.saveAndFlush(user); } //méthode de création d'un user
 
     public void createUser(String name, String password) {
@@ -62,11 +61,14 @@ public class UserService {
         userRepository.deleteAll();
     } //Suppression de tous les users
 
-    public void updateUser(User user, Integer id) {
-        User userToUpdate = userRepository.getById(id);
-        userToUpdate.setUserName(user.getUserName());
-        userToUpdate.setUserPassword(user.getUserPassword());
-        userRepository.save(userToUpdate);
+    public void updateUserName(User user, String userNameUpdate) {
+        user.setUserName(userNameUpdate);
+        userRepository.save(user);
+    }
+
+    public void updateUserPassword(User user, String userPasswordUpdate) {
+        user.setUserPassword(userPasswordUpdate);
+        userRepository.save(user);
     }
 
 

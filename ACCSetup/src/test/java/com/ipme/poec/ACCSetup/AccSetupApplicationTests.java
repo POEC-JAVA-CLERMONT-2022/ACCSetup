@@ -1,11 +1,14 @@
 package com.ipme.poec.ACCSetup;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.ipme.poec.ACCSetup.Model.*;
 import com.ipme.poec.ACCSetup.Service.SessionService;
 import com.ipme.poec.ACCSetup.Service.SetupService;
 import com.ipme.poec.ACCSetup.Service.UserService;
 import org.junit.Assert;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,10 +37,24 @@ class AccSetupApplicationTests {
     @Autowired
     private SessionService sessionService;
 
+    @BeforeEach
+    void beforeEach() {
+        this.userService.deleteAllUsers();
+        this.sessionService.deleteAllSessions();
+        this.sessionService.deleteAllCars();
+        this.sessionService.deleteAllTracks();
+
+
+    }
+
+    @AfterEach
+    void afterEach() {
+
+    }
+
     @Test
     void creationSaveUserTest() {
         //Instanciation des données
-        this.userService.deleteAllUsers();
         String name = "test";
         String nameKo = "testKo";
         String password = "pass";
@@ -51,9 +68,10 @@ class AccSetupApplicationTests {
         } catch (ConstraintViolationException constraintViolationException) {
 
         }
+
         //test des valeurs après exécution du code
-        User userTest = userService.getById(1);
-        User userTest2 = userService.getById(2);
+        User userTest = userService.getById(2);
+        User userTest2 = userService.getById(3);
 
         assertThat(userTest.getUserName()).isEqualTo("test");
         assertThat(userTest.getUserName()).isNotEqualTo("nameKo");
@@ -61,29 +79,32 @@ class AccSetupApplicationTests {
 
     @Test
     void creationCreateUserTest() {
-        this.userService.deleteAllUsers();
         userService.createUser("monculsurlacommode", "pass");
-        User userTest = userService.getById(1);
+        User userTest = userService.getById(6);
         assertThat(userTest.getUserName()).isEqualTo("monculsurlacommode");
     }
 
     @Test
     void creationValidSessionTest() {
 
-        Car carTest = new Car(1, "Citronault Pipo");
-        sessionService.saveCar(carTest);
-        Track trackTest = new Track(1, "Charade");
-        sessionService.saveTrack(trackTest);
-        User userTest = new User(1, "validName", "validPassword");
-        userService.saveUser(userTest);
 
-        sessionService.createSession("validSessionTest", LocalDate.parse("2022-04-01"), 1, 1, 1);
-        Session sessionTest = sessionService.getSessionById(1);
+        Car carTest = new Car("Citronault Pipo");
+        sessionService.saveCar(carTest);
+        Track trackTest = new Track("Charade");
+        sessionService.saveTrack(trackTest);
+        User userTest2 = new User("validName", "validPassword");
+        userService.saveUser(userTest2);
+
+        sessionService.createSession("validSessionTest", LocalDate.parse("2022-04-01"), trackTest, carTest, userTest2);
+        Session sessionTest = sessionService.getSessionById(2);
         assertThat(sessionTest.getSessionDate()).isEqualTo(LocalDate.parse("2022-04-01"));
+
+
     }
 
     @Test
     void creationValidSetupTest() {
+
 
         //Instanciation des données
         Weather weatherTest = new Weather(1, "SUNNY");
@@ -96,24 +117,55 @@ class AccSetupApplicationTests {
         conditionIds.add(1);
         setupService.saveCondition(conditionTest);
 
-        Car carTest = new Car(1, "Citronault Pipo");
-        sessionService.saveCar(carTest);
-        Track trackTest = new Track(1, "Charade");
-        sessionService.saveTrack(trackTest);
-        User userTest = new User(1, "validName", "validPassword");
-        userService.saveUser(userTest);
-        sessionService.createSession("validSessionTest", LocalDate.parse("2022-04-01"), 1, 1, 1);
-        Session sessionTest = sessionService.getSessionById(1);
+        Car carTest2 = new Car("Fiat Multipla");
+        sessionService.saveCar(carTest2);
+        Track trackTest2 = new Track("Charade");
+        sessionService.saveTrack(trackTest2);
+        User userTest3 = new User("validName", "validPassword");
+        userService.saveUser(userTest3);
+        sessionService.createSession("validSessionTest2", LocalDate.parse("2022-04-02"), trackTest2, carTest2, userTest3);
+        Session sessionTest = sessionService.getSessionById(2);
+
+        setupService.createSetup(weatherIds, conditionIds, sessionTest);
         Setup setupTest = setupService.getSetupById(1);
 
-        //Appel de la méthode à tester
-        setupService.createSetup(weatherIds, conditionIds, 1);
-
-        //test des valeurs après exécution du code
         assertThat(setupTest.getSession()).isEqualTo(sessionTest);
 
 
     }
 
+    @Test
+    void updateUserNameTest() {
+        userService.createUser("HuileDeCul", "pass");
+        User userTest = userService.getById(4);
+        userService.updateUserName(userTest, "FranckyVincent");
+        assertThat(userTest.getUserName()).isEqualTo("FranckyVincent");
+    }
+
+    @Test
+    void updateSessionUpdateTest(){
+        Car carTest = new Car("Renault Fuego");
+        sessionService.saveCar(carTest);
+        Track trackTest = new Track("Nogaro");
+        sessionService.saveTrack(trackTest);
+        User userTest2 = new User("UwU", "Password");
+        userService.saveUser(userTest2);
+
+        sessionService.createSession("validSession", LocalDate.parse("2022-04-01"), trackTest, carTest, userTest2);
+        Session sessionToUpdate = sessionService.getSessionById(1);
+        sessionService.updateSession(sessionToUpdate,"VraimentUneSessionValide",LocalDate.parse("2023-01-01"));
+
+        assertThat(sessionToUpdate.getSessionName()).isEqualTo("VraimentUneSessionValide");
+        assertThat(sessionToUpdate.getSessionDate()).isEqualTo(LocalDate.parse("2023-01-01"));
+
+    }
+
+    @Test
+    void updateSetupUpdateTest(){
+
+    }
 
 }
+
+
+

@@ -47,7 +47,7 @@ public class SetupService {
 
     public Condition getConditionById(Integer id) { return conditionRepository.getById(id);}
 
-    public void createSetup(List<Integer> weatherIds, List<Integer> conditionIds, Integer sessionId) {
+    public void createSetup(List<Integer> weatherIds, List<Integer> conditionIds, Session session) {
 
 
         List<Weather> weathers = new LinkedList<>(); //on initialise une liste de météos
@@ -56,7 +56,6 @@ public class SetupService {
         List<Condition> conditions = new LinkedList<>();
         conditions = conditionRepository.findByIdsIn(conditionIds);
 
-        Session session = sessionRepository.getById(sessionId);
         Setup setup = new Setup();
         setup.setConditions(conditions);
         setup.setWeathers(weathers);

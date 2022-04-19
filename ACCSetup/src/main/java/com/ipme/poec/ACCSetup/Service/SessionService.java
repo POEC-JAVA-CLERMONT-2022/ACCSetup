@@ -20,77 +20,99 @@ import com.ipme.poec.ACCSetup.Repository.TrackRepository;
 public class SessionService {
 
 
-	@Autowired
-	private SessionRepository sessionRepository;
-	
-	@Autowired
-	private CarRepository carRepository;
-	
-	@Autowired
-	private TrackRepository trackRepository;
+    @Autowired
+    private SessionRepository sessionRepository;
 
-	@Autowired
-	private UserRepository userRepository;
-	
-	
-	public List<Session> findAllSessions() {
-		return sessionRepository.findAll();
-	}
+    @Autowired
+    private CarRepository carRepository;
 
-	public List<Car> findAllCars() { return carRepository.findAll(); }
+    @Autowired
+    private TrackRepository trackRepository;
 
-	public List<Track> findAllTracks() { return trackRepository.findAll(); }
+    @Autowired
+    private UserRepository userRepository;
 
-	public Optional<Session> findSessionById(Integer id) { return sessionRepository.findById(id); } //méthode pour obtenir un user selon son userId
 
-	public Session getSessionById(Integer id) { return sessionRepository.getById(id); }
+    public List<Session> findAllSessions() {
+        return sessionRepository.findAll();
+    }
 
-	public Optional<Car> findCarById(Integer id) { return carRepository.findById(id);} //méthode pour obtenir la voiture
+    public List<Car> findAllCars() {
+        return carRepository.findAll();
+    }
 
-	public Car getCarById(Integer id) { return carRepository.getById(id);} //méthode pour obtenir obligatoirement la voiture, qui est forcément nécessaire pour créer une session
+    public List<Track> findAllTracks() {
+        return trackRepository.findAll();
+    }
 
-	public Car saveCar(Car car) { return carRepository.saveAndFlush(car);}
+    public Optional<Session> findSessionById(Integer id) {
+        return sessionRepository.findById(id);
+    } //méthode pour obtenir un user selon son userId
 
-	public Optional<Track> findTrackById(Integer id) { return trackRepository.findById(id);} //méthode pour obtenir la piste
+    public Session getSessionById(Integer id) {
+        return sessionRepository.getById(id);
+    }
 
-	public Track getTrackById(Integer id) { return trackRepository.getById(id);} //méthode pour obtenir obligatoirement la piste, qui est forcément nécessaire pour créer une session
+    public Optional<Car> findCarById(Integer id) {
+        return carRepository.findById(id);
+    } //méthode pour obtenir la voiture
 
-	public Track saveTrack(Track track) { return trackRepository.saveAndFlush(track);}
+    public Car getCarById(Integer id) {
+        return carRepository.getById(id);
+    } //méthode pour obtenir obligatoirement la voiture, qui est forcément nécessaire pour créer une session
 
-	public User getUserById(Integer id) { return userRepository.getById(id);} //méthode pour récupérer un user, qui est forcément lié à une session
+    public Car saveCar(Car car) {
+        return carRepository.saveAndFlush(car);
+    }
 
-//	public void createSession(Session session) { sessionRepository.saveAndFlush(session); } //méthode de création d'un user
+    public Optional<Track> findTrackById(Integer id) {
+        return trackRepository.findById(id);
+    } //méthode pour obtenir la piste
 
-//	public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
-//		Session session = new Session();
-//		session.setSessionName(sessionName);
-//		session.setSessionDate(sessionDate);
-//		session.setCar(car);
-//		session.setTrack(track);
-//		session.setUser(user);
-//
-//		sessionRepository.saveAndFlush(session); }
+    public Track getTrackById(Integer id) {
+        return trackRepository.getById(id);
+    } //méthode pour obtenir obligatoirement la piste, qui est forcément nécessaire pour créer une session
 
-		public void createSession(String sessionName, LocalDate sessionDate, Integer trackId, Integer carId, Integer userId) {
-		Session session = new Session();
-		session.setSessionName(sessionName);
-		session.setSessionDate(sessionDate);
-		Track track = trackRepository.getById(trackId);
-		Car car = carRepository.getById(carId);
-		User user = userRepository.getById(userId);
-		session.setCar(car);
-		session.setTrack(track);
-		session.setUser(user);
+    public Track saveTrack(Track track) {
+        return trackRepository.saveAndFlush(track);
+    }
 
-		sessionRepository.saveAndFlush(session); }
+    public User getUserById(Integer id) {
+        return userRepository.getById(id);
+    } //méthode pour récupérer un user, qui est forcément lié à une session
 
-	public void deleteSession(Integer id) { sessionRepository.deleteById(id); } //méthode de suppression d'un user, selon son userId
 
-	public void updateSession(Session session, Integer id) {
-		Session sessionToUpdate = sessionRepository.getById(id);
-		sessionToUpdate.setSessionName(session.getSessionName());
-		sessionToUpdate.setSessionDate(session.getSessionDate());
-		sessionRepository.save(sessionToUpdate);
-	}
-	
+    public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
+        Session session = new Session();
+        session.setSessionName(sessionName);
+        session.setSessionDate(sessionDate);
+        session.setCar(car);
+        session.setTrack(track);
+        session.setUser(user);
+
+        sessionRepository.saveAndFlush(session);
+    }
+
+    public void deleteSession(Integer id) {
+        sessionRepository.deleteById(id);
+    } //méthode de suppression d'un user, selon son userId
+
+    public void deleteAllSessions() {
+        sessionRepository.deleteAll();
+    }
+
+    public void deleteAllCars() {
+        carRepository.deleteAll();
+    }
+
+    public void deleteAllTracks() {
+        trackRepository.deleteAll();
+    }
+
+    public void updateSession(Session session, String sessionNameUpdate, LocalDate sessionDateUpdate) {
+        session.setSessionName(sessionNameUpdate);
+        session.setSessionDate(sessionDateUpdate);
+        sessionRepository.save(session);
+    }
+
 }
