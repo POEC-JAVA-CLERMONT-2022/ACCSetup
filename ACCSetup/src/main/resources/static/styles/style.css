@@ -1,0 +1,33 @@
+body {
+	background-color: #181818;
+	color: yellowgreen;
+	font-family: sans-serif;
+}
+
+h1 {
+	margin: 1rem;
+}
+
+nav ul {
+	display: flex;
+    list-style: none;
+}
+
+nav {
+    background-color: #3f3f3f;
+    padding: .1rem;
+    margin-bottom: .8rem
+}
+
+nav a {
+	padding: .5rem;
+}
+
+a {
+	color: yellowgreen;
+    text-decoration: none;
+}
+
+a:active {
+	color: yellow;
+}
