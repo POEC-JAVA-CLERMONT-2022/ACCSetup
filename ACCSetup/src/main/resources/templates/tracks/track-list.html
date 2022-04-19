@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>track-list</title>
+<link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<h1>track-list</h1>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="/">home</a></li>
+		</ul>
+	</nav>
+	<div class="container-tracks">
+	    <div class="track" th:each="track : ${tracks}">
+            <div th:text="${track.trackId}">I display the track ID</div>
+            <div th:text="${track.trackName}">I display the track name</div>
+	    </div>
+	</div>
+	
+</body>
+</html>

@@ -25,7 +25,16 @@ public class PublicController {
 		mAV.addObject("cars", sessionService.findAllCars());
 
         return mAV;
-	}		
+	}
+	
+	@GetMapping("/track-list")
+	public ModelAndView trackList( ) {
+		ModelAndView mAV = new ModelAndView("tracks/track-list");
+		
+		mAV.addObject("tracks", sessionService.findAllTracks());
+
+        return mAV;
+	}
 	
 	
 }

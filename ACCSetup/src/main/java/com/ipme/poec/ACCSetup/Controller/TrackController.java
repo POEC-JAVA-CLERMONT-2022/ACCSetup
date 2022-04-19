@@ -18,6 +18,7 @@ import java.util.Map;
 
 
 @RestController
+@RequestMapping("api/tracks")
 public class TrackController {
 
     @Autowired
