@@ -53,6 +53,14 @@ public class SessionService {
         return sessionRepository.getById(id);
     }
 
+    public Session getSessionByName(String name) {
+        return sessionRepository.getBySessionName(name);
+    }
+
+//    public Session getSessionByName(String name) {
+//        return sessionRepository.getBySessionName(name);
+//    }
+
     public Optional<Car> findCarById(Integer id) {
         return carRepository.findById(id);
     } //méthode pour obtenir la voiture
@@ -60,6 +68,10 @@ public class SessionService {
     public Car getCarById(Integer id) {
         return carRepository.getById(id);
     } //méthode pour obtenir obligatoirement la voiture, qui est forcément nécessaire pour créer une session
+
+    public Car getCarByName(String name) {
+        return carRepository.getCarByName(name);
+    }
 
     public Car saveCar(Car car) {
         return carRepository.saveAndFlush(car);
@@ -72,6 +84,10 @@ public class SessionService {
     public Track getTrackById(Integer id) {
         return trackRepository.getById(id);
     } //méthode pour obtenir obligatoirement la piste, qui est forcément nécessaire pour créer une session
+
+    public Track getTrackByName(String name) {
+        return trackRepository.getByTrackName(name);
+    }
 
     public Track saveTrack(Track track) {
         return trackRepository.saveAndFlush(track);

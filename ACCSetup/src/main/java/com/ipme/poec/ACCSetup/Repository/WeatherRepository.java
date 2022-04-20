@@ -1,5 +1,6 @@
 package com.ipme.poec.ACCSetup.Repository;
 
+import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Model.Weather;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -18,6 +19,6 @@ public interface WeatherRepository extends JpaRepository<Weather, Integer> {
     List<Weather> findByIdsIn(@Param("ids") List<Integer> ids);
 
 
-//    @Query("SELECT w FROM Weather w WHERE w.weatherId = :id")
-//    Weather findById(@Param("weatherId") Weather weatherId);
+    @Query("SELECT w FROM Weather w WHERE w.weatherName = :weather_name")
+    Weather getByWeatherName(@Param("weather_name") String name);
 }

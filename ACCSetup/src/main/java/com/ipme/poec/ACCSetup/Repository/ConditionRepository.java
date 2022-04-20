@@ -1,5 +1,6 @@
 package com.ipme.poec.ACCSetup.Repository;
 
+import com.ipme.poec.ACCSetup.Model.Car;
 import com.ipme.poec.ACCSetup.Model.Condition;
 import com.ipme.poec.ACCSetup.Model.Weather;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,7 +19,7 @@ public interface ConditionRepository extends JpaRepository<Condition, Integer> {
     @Query("SELECT t FROM Condition t WHERE t.trackConditionId IN :ids")
     List<Condition> findByIdsIn(@Param("ids") List<Integer> ids);
 
-//    @Query("SELECT c FROM Condition c WHERE c.trackConditionId = :id")
-//    Condition findById(@Param("conditionID") Condition conditionId);
+    @Query("SELECT c FROM Condition c WHERE c.trackConditionName = :trackconditionname")
+    Condition getConditionByName(@Param("trackconditionname") String name);
 
 }
