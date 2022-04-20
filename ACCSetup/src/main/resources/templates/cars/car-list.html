@@ -14,10 +14,10 @@
 			<li><a href="/">home</a></li>
 		</ul>
 	</nav>
-	<div class="container-cars">
-	    <div class="car" th:each="car : ${cars}">
-            <div th:text="${car.carId}">I display the car ID</div>
-            <div th:text="${car.carName}">I display the car name</div>
+	<div class="container-cars  container-a">
+	    <div class="car  container-b" th:each="car : ${cars}">
+            <div class="container-c" th:text="${car.carId}">I display the car ID</div>
+            <div class="container-d" th:text="${car.carName}">I display the car name</div>
 	    </div>
 	</div>
 	

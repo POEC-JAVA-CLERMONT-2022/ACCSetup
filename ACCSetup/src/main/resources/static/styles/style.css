@@ -32,15 +32,24 @@ a:active {
 	color: yellow;
 }
 
-.container-cars, .container-tracks {
-    gap : .2rem;
-    
+.container-a, .container-b, .container-c, .container-d {
+	margin: .2rem;
+	padding: .2rem;
 }
 
-.car, .track {
+.container-b {
 	display: flex;
 	background-color: #3f3f3f;
-    padding: .5rem;
-    border: 1px solid yellowgreen;
-    background-color: #3f3f3f; 
 }
+
+.container-c {
+	min-width: 2rem;
+	text-align: center;
+	background-color: #181818;
+}
+.container-d {
+	min-width: 12rem;
+	text-align: left;
+	background-color: #3f3f3f;
+}
+
