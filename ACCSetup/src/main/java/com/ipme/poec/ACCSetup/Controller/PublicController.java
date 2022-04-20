@@ -49,5 +49,14 @@ public class PublicController {
         return mAV;
 	}
 	
+	@GetMapping("/condition-list")
+	public ModelAndView conditionList( ) {
+		ModelAndView mAV = new ModelAndView("conditions/condition-list");
+		
+		mAV.addObject("conditions", setupService.findAllConditions());
+
+        return mAV;
+	}
+	
 	
 }
