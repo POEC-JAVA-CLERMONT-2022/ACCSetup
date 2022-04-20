@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>weather-list</title>
+<link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<h1>weather-list</h1>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="/">home</a></li>
+		</ul>
+	</nav>
+	<div class="container-weathers container-a">
+	    <div class="weather container-b" th:each="weather : ${weathers}">
+            <div class="container-c" th:text="${weather.weatherId}">I display the weather ID</div>
+            <div class="container-d" th:text="${weather.weatherName}">I display the weather name</div>
+	    </div>
+	</div>
+	
+</body>
+</html>

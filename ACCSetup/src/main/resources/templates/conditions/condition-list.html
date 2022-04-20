@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>condition-list</title>
+<link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<h1>condition-list</h1>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="/">home</a></li>
+		</ul>
+	</nav>
+	<div class="container-conditions container-a">
+	    <div class="condition container-b" th:each="condition : ${conditions}">
+            <div class="container-c" th:text="${condition.trackConditionId}">I display the condition ID</div>
+            <div class="container-d" th:text="${condition.trackConditionName}">I display the condition name</div>
+	    </div>
+	</div>
+	
+</body>
+</html>

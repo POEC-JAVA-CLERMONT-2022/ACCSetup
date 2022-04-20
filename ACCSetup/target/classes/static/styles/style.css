@@ -1,0 +1,55 @@
+body {
+	background-color: #181818;
+	color: yellowgreen;
+	font-family: sans-serif;
+}
+
+h1 {
+	margin: 1rem;
+}
+
+nav ul {
+	display: flex;
+    list-style: none;
+}
+
+nav {
+    background-color: #3f3f3f;
+    padding: .1rem;
+    margin-bottom: .8rem
+}
+
+nav a {
+	padding: .5rem;
+}
+
+a {
+	color: yellowgreen;
+    text-decoration: none;
+}
+
+a:active {
+	color: yellow;
+}
+
+.container-a, .container-b, .container-c, .container-d {
+	margin: .2rem;
+	padding: .2rem;
+}
+
+.container-b {
+	display: flex;
+	background-color: #3f3f3f;
+}
+
+.container-c {
+	min-width: 2rem;
+	text-align: center;
+	background-color: #181818;
+}
+.container-d {
+	min-width: 12rem;
+	text-align: left;
+	background-color: #3f3f3f;
+}
+
