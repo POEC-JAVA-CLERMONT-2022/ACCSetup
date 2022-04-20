@@ -1,6 +1,8 @@
 package com.ipme.poec.ACCSetup.Model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
@@ -13,15 +15,29 @@ public class User {
     private int userId;
 
     @Column(name = "user_name", length = 255)
+    @NotNull
+    @NotBlank(message = "Le nom est obligatoire")
     private String userName;
 
     @Column(name = "user_password", length = 255)
+    @NotNull
+    @NotBlank(message = "Le mot de passe est obligatoire")
     private String userPassword;
 
     @OneToMany
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_Id")
     private List<Session> sessions;
 
+    public User(String userName, String userPassword) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+    }
+
+    public User(int userId, String userName, String userPassword) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userPassword = userPassword;
+    }
 
     public User(int userId, String userName, String userPassword, List<Session> sessions) {
         this.userId = userId;
@@ -89,4 +105,6 @@ public class User {
                 ", userPassword='" + userPassword + '\'' +
                 '}';
     }
+
+
 }
