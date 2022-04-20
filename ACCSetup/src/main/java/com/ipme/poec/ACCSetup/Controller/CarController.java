@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -16,16 +17,22 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@RequestMapping(value ="/cars")
 public class CarController {
 
 
     @Autowired
     private SessionService sessionService;
 
-    @GetMapping("cars")
-    public List<Car> getCars(){
+    @GetMapping(produces = "application/json")
+    public List<Car> listCars(){
         return sessionService.findAllCars();
     }
+
+//    @PostMapping
+//    public ModelAndView create(Car car) {
+//        return new ModelAndView("create-car");
+//    }
 
 //    @ResponseStatus(HttpStatus.BAD_REQUEST)
 //    @ExceptionHandler(MethodArgumentNotValidException.class)
