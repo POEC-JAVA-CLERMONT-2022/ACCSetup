@@ -16,11 +16,24 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+<<<<<<< HEAD
 		<!--		<dependency>-->
 		<!--			<groupId>org.springframework.boot</groupId>-->
 		<!--			<artifactId>spring-boot-starter</artifactId>-->
 		<!--			<version>2.6.5</version>-->
 		<!--		</dependency>-->
+=======
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>2.6.4</version>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter</artifactId>-->
+<!--			<version>2.6.5</version>-->
+<!--		</dependency>-->
+>>>>>>> 8de81a276ce26bbefd86f4f2a23624e8fa618f52
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -79,6 +92,7 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>6.0.13.Final</version>
 		</dependency>
+<<<<<<< HEAD
 		<!--		<dependency>-->
 		<!--			<groupId>org.springframework.shell</groupId>-->
 		<!--			<artifactId>spring-shell-shell1-adapter</artifactId>-->
@@ -111,6 +125,40 @@
 		</dependency>
 
 
+=======
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+		</dependency>
+
+
+		<!--		<dependency>-->
+<!--			<groupId>org.springframework.shell</groupId>-->
+<!--			<artifactId>spring-shell-shell1-adapter</artifactId>-->
+<!--			<version>2.0.1.RELEASE</version>-->
+<!--			<scope>compile</scope>-->
+<!--		</dependency>-->
+>>>>>>> 8de81a276ce26bbefd86f4f2a23624e8fa618f52
 	</dependencies>
 
 	<build>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>car-list</title>
+<link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<h1>car-list</h1>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="/">home</a></li>
+		</ul>
+	</nav>
+	<div class="container-cars  container-a">
+	    <div class="car  container-b" th:each="car : ${cars}">
+            <div class="container-c" th:text="${car.carId}">I display the car ID</div>
+            <div class="container-d" th:text="${car.carName}">I display the car name</div>
+	    </div>
+	</div>
+	
+</body>
+</html>

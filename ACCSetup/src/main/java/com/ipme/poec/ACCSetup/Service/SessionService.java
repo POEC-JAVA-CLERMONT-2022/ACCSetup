@@ -49,24 +49,35 @@ public class SessionService {
 
 	public Car getCarById(Integer id) { return carRepository.getById(id);} //méthode pour obtenir obligatoirement la voiture, qui est forcément nécessaire pour créer une session
 
+	public Car saveCar(Car car) { return carRepository.saveAndFlush(car);}
+
 	public Optional<Track> findTrackById(Integer id) { return trackRepository.findById(id);} //méthode pour obtenir la piste
 
 	public Track getTrackById(Integer id) { return trackRepository.getById(id);} //méthode pour obtenir obligatoirement la piste, qui est forcément nécessaire pour créer une session
+
+	public Track saveTrack(Track track) { return trackRepository.saveAndFlush(track);}
 
 	public User getUserById(Integer id) { return userRepository.getById(id);} //méthode pour récupérer un user, qui est forcément lié à une session
 
 //	public void createSession(Session session) { sessionRepository.saveAndFlush(session); } //méthode de création d'un user
 
-	public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
-		Integer trackId = null;
-		Integer carId = null;
-		Integer userId = null;
-		track = trackRepository.getById(trackId);
-		car = carRepository.getById(carId);
-		user = userRepository.getById(userId);
+//	public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
+//		Session session = new Session();
+//		session.setSessionName(sessionName);
+//		session.setSessionDate(sessionDate);
+//		session.setCar(car);
+//		session.setTrack(track);
+//		session.setUser(user);
+//
+//		sessionRepository.saveAndFlush(session); }
+
+		public void createSession(String sessionName, LocalDate sessionDate, Integer trackId, Integer carId, Integer userId) {
 		Session session = new Session();
 		session.setSessionName(sessionName);
 		session.setSessionDate(sessionDate);
+		Track track = trackRepository.getById(trackId);
+		Car car = carRepository.getById(carId);
+		User user = userRepository.getById(userId);
 		session.setCar(car);
 		session.setTrack(track);
 		session.setUser(user);
