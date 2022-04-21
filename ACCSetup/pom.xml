@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.4</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ipme.poec</groupId>
 	<artifactId>ACCSetup</artifactId>
@@ -16,24 +17,11 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-<<<<<<< HEAD
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.boot</groupId>-->
-		<!--			<artifactId>spring-boot-starter</artifactId>-->
-		<!--			<version>2.6.5</version>-->
-		<!--		</dependency>-->
-=======
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-			<version>2.6.4</version>
-		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
 <!--			<artifactId>spring-boot-starter</artifactId>-->
 <!--			<version>2.6.5</version>-->
 <!--		</dependency>-->
->>>>>>> 8de81a276ce26bbefd86f4f2a23624e8fa618f52
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -55,9 +43,9 @@
 			<version>2.6.5</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>2.6.5</version>
 		</dependency>
 		<dependency>
@@ -92,40 +80,6 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>6.0.13.Final</version>
 		</dependency>
-<<<<<<< HEAD
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.shell</groupId>-->
-		<!--			<artifactId>spring-shell-shell1-adapter</artifactId>-->
-		<!--			<version>2.0.1.RELEASE</version>-->
-		<!--			<scope>compile</scope>-->
-		<!--		</dependency>-->
-		<dependency>
-			<groupId>org.jeasy</groupId>
-			<artifactId>easy-random-core</artifactId>
-			<version>5.0.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>2.28.2</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-junit-jupiter</artifactId>
-			<version>2.28.2</version>
-			<scope>test</scope>
-		</dependency>
-
-
-=======
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
@@ -150,6 +104,16 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.22</version>
 		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.4</version>
+		</dependency>
 
 
 		<!--		<dependency>-->
@@ -158,7 +122,6 @@
 <!--			<version>2.0.1.RELEASE</version>-->
 <!--			<scope>compile</scope>-->
 <!--		</dependency>-->
->>>>>>> 8de81a276ce26bbefd86f4f2a23624e8fa618f52
 	</dependencies>
 
 	<build>
