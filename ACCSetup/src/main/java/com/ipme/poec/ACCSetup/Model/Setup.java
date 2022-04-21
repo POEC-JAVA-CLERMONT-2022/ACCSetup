@@ -12,6 +12,8 @@ public class Setup {
     @Column(name = "setupID", length = 11)
     private int setupId;
 
+    @Column(name = "setupname")
+    private String setupName;
     @Column(name = "setupflpsi")
     private float setupFLPsi;
     @Column(name = "setupfrpsi")
@@ -50,11 +52,12 @@ public class Setup {
     private List<Condition> conditions;
 
     @ManyToOne
-    @JoinColumn(name = "sessionid",nullable = false)
+    @JoinColumn(name = "sessionid", nullable = false)
     private Session session;
 
-    public Setup(int setupId, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc, List<Weather> weathers, List<Condition> conditions, Session session) {
+    public Setup(int setupId, String setupName, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc, List<Weather> weathers, List<Condition> conditions, Session session) {
         this.setupId = setupId;
+        this.setupName = setupName;
         this.setupFLPsi = setupFLPsi;
         this.setupFRPsi = setupFRPsi;
         this.setupRLPsi = setupRLPsi;
@@ -85,6 +88,14 @@ public class Setup {
 
     public void setSetupId(int setupId) {
         this.setupId = setupId;
+    }
+
+    public String getSetupName() {
+        return setupName;
+    }
+
+    public void setSetupName(String setupName) {
+        this.setupName = setupName;
     }
 
     public float getSetupFLPsi() {

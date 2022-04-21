@@ -19,14 +19,17 @@ public class Car {
 	private String carName;
 
 	public Car(String carName) {
-		super();
+		this.carName = carName;
+	}
+
+	public Car(int carId, String carName) {
+		this.carId = carId;
 		this.carName = carName;
 	}
 
 	public Car() {
 
 	}
-
 
 
 	public int getCarId() {
