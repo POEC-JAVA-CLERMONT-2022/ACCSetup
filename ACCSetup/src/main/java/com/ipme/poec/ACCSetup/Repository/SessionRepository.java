@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 
 public interface SessionRepository extends JpaRepository<Session, Integer> {
-
+    //TODO: utiliser JPA
     @Query("SELECT s FROM Session s WHERE s.sessionName = :sessionname")
     Session getBySessionName(@Param("sessionname") String name);
 }

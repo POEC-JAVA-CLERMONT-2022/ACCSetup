@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+//TODO: mettre plusieurs services
 public class SetupService {
 
     @Autowired
@@ -104,6 +105,8 @@ public class SetupService {
     } //méthode de suppression d'un user, selon son userId
 
     public void updateSetup(Setup setup, String nameToUpdate,float setupFLCamberToUpdate,float setupFRCamberToUpdate,float setupRLCamberToUpdate,float setupRRCamberToUpdate,float setupFLPsiToUpdate,float setupFRPsiToUpdate,float setupRLPsiToUpdate,float setupRRPsiToUpdate,float setupFLToeToUpdate,float setupFRToeToUpdate,float setupRLToeToUpdate,float setupRRToeToUpdate,float setupFLCasterToUpdate,float setupFRCasterToUpdate,String setupDescToUpdate,List<Integer> conditionsToUpdate,List<Integer> weathersToUpdate) {
+
+        //TODO: plusieurs méthodes
         setup.setSetupName(nameToUpdate);
         setup.setSetupFLCamber(setupFLCamberToUpdate);
         setup.setSetupFRCamber(setupFRCamberToUpdate);
@@ -133,6 +136,8 @@ public class SetupService {
     }
 
     public void updateSetupByName(String setupName, String nameToUpdate,float setupFLCamberToUpdate,float setupFRCamberToUpdate,float setupRLCamberToUpdate,float setupRRCamberToUpdate,float setupFLPsiToUpdate,float setupFRPsiToUpdate,float setupRLPsiToUpdate,float setupRRPsiToUpdate,float setupFLToeToUpdate,float setupFRToeToUpdate,float setupRLToeToUpdate,float setupRRToeToUpdate,float setupFLCasterToUpdate,float setupFRCasterToUpdate,String setupDescToUpdate,List<Integer> conditionsToUpdate,List<Integer> weathersToUpdate) {
+
+        //TODO: plusieurs méthodes
         Setup setup = setupRepository.getBySetupName(setupName);
         setup.setSetupName(nameToUpdate);
         setup.setSetupFLCamber(setupFLCamberToUpdate);

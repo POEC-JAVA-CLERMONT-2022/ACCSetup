@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9516880c-327e-4939-9aba-6c47bb5347c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ACCSetup.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCSetup/target/classes/META-INF/maven/ipme.poec/ACCSetup/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/target/classes/META-INF/maven/ipme.poec/ACCSetup/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/AccSetupApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/AccSetupApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/SessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/SetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/SetupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/CarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/ConditionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/ConditionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/SetupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/SetupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/TrackRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/WeatherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Repository/WeatherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/DisplayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSetup/src/test/java/com/ipme/poec/ACCSetup/AccSetupApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/src/test/java/com/ipme/poec/ACCSetup/AccSetupApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +31,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -67,6 +91,7 @@
       <workItem from="1647935342139" duration="40000" />
       <workItem from="1648216324807" duration="357000" />
       <workItem from="1648216689767" duration="96000" />
+      <workItem from="1650523131216" duration="1392000" />
     </task>
     <servers />
   </component>

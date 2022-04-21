@@ -15,10 +15,12 @@ public interface WeatherRepository extends JpaRepository<Weather, Integer> {
 
     List<Weather> findAll( );
     Optional<Weather> findById(Integer id);
+
+    //TODO: utiliser JPA
     @Query("SELECT t FROM Weather t WHERE t.weatherId IN :ids")
     List<Weather> findByIdsIn(@Param("ids") List<Integer> ids);
 
-
+    //TODO: utiliser JPA
     @Query("SELECT w FROM Weather w WHERE w.weatherName = :weather_name")
     Weather getByWeatherName(@Param("weather_name") String name);
 }

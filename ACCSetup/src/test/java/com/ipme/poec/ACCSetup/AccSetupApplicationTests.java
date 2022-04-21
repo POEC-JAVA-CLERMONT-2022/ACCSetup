@@ -26,6 +26,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @Transactional
+//TODO: plusieurs classes
+//TODO: mettre en place des TU
 class AccSetupApplicationTests {
 
     @Autowired
@@ -54,14 +56,14 @@ class AccSetupApplicationTests {
 
     @Test
     void saveUserTest() {
-        //Instanciation des données
+        //Instanciation des donnï¿½es
         String name = "test";
         String password = "pass";
-        //Appel de la méthode à tester
+        //Appel de la mï¿½thode ï¿½ tester
         User user1 = new User(1, name, password);
         userService.saveUser(user1);
 
-        //test des valeurs après exécution du code
+        //test des valeurs aprï¿½s exï¿½cution du code
         User userTest = userService.getByName("test");
 
         assertThat(userTest.getUserName()).isEqualTo("test");
@@ -96,7 +98,7 @@ class AccSetupApplicationTests {
     void createSetupTest() {
 
 
-        //Instanciation des données
+        //Instanciation des donnï¿½es
         Weather weatherTest = new Weather(1, "SUNNY");
         List<Integer> weatherIds = new LinkedList<>();
         weatherIds.add(1);
@@ -134,10 +136,10 @@ class AccSetupApplicationTests {
 
     @Test
     void updateUserPasswordTest() {
-        userService.createUser("TourneJosé", "pass");
-        User userTest = userService.getByName("TourneJosé");
+        userService.createUser("TourneJosï¿½", "pass");
+        User userTest = userService.getByName("TourneJosï¿½");
         userService.updateUserPassword(userTest, "FranckyVincent");
-        User userToBeTested = userService.getByName("TourneJosé");
+        User userToBeTested = userService.getByName("TourneJosï¿½");
         assertThat(userToBeTested.getUserPassword()).isEqualTo("FranckyVincent");
     }
 
@@ -161,7 +163,7 @@ class AccSetupApplicationTests {
 
     @Test
     void updateSetupTest() {
-        //Instanciation des données
+        //Instanciation des donnï¿½es
         Weather weatherTest = new Weather(1, "SUNNY");
         List<Integer> weathers = new LinkedList<>();
         weathers.add(1);

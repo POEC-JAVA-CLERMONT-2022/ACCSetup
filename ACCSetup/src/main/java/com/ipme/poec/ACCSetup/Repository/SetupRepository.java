@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 
 public interface SetupRepository extends JpaRepository<Setup, Integer> {
-
+    //TODO: utiliser JPA
     @Query("SELECT s FROM Setup s WHERE s.setupName = :setupname")
     Setup getBySetupName(@Param("setupname") String name);
 

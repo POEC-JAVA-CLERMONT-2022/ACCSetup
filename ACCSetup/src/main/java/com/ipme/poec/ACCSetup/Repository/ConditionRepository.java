@@ -13,12 +13,12 @@ import java.util.Optional;
 
 
 public interface ConditionRepository extends JpaRepository<Condition, Integer> {
-
+    //TODO: utiliser JPA
     List<Condition> findAll( );
     Optional<Condition> findById(Integer id);
     @Query("SELECT t FROM Condition t WHERE t.trackConditionId IN :ids")
     List<Condition> findByIdsIn(@Param("ids") List<Integer> ids);
-
+    //TODO: utiliser JPA
     @Query("SELECT c FROM Condition c WHERE c.trackConditionName = :trackconditionname")
     Condition getConditionByName(@Param("trackconditionname") String name);
 

@@ -9,6 +9,9 @@ import org.springframework.stereotype.Repository;
 
 
 public interface CarRepository extends JpaRepository<Car, Integer> {
+
+    //TODO: utiliser JPA
+    
     @Query("SELECT c FROM Car c WHERE c.carName = :carname")
     Car getCarByName(@Param("carname") String name);
 }

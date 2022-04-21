@@ -37,6 +37,7 @@ public class UserController {
         userService.createUser(name,password);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
     }
 
+    //TODO: à supprimer
 //    @PostMapping("users/add")
 //    public User create(){
 //        return userService.createUser();

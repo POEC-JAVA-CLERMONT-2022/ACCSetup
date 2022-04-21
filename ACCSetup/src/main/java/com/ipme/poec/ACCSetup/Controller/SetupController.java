@@ -28,7 +28,7 @@ public class SetupController {
         return setupService.findAll();
     }
 
-
+    //TODO: à supprimer
 //    @PostMapping("setups/add")   //mapping de la méthode
 //    public void createSetup(List<Integer> weatherIds, List<Integer> conditionIds, Integer id){
 //        setupService.createSetup(weatherIds,conditionIds,id);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
