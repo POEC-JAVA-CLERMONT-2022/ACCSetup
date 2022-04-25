@@ -1,10 +1,16 @@
 package com.ipme.poec.ACCSetup;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
+
+import com.ipme.poec.ACCSetup.Model.Session;
+import com.ipme.poec.ACCSetup.Model.Track;
 import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Repository.SessionRepository;
 import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import com.ipme.poec.ACCSetup.Service.*;
+
+import java.time.LocalDate;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -38,7 +44,6 @@ public class AccSetupApplication {
 		SpringApplication.run(AccSetupApplication.class, args);
 
 	}
-	
 	
 
 //	@EventListener(classes = {ApplicationStartedEvent.class})
