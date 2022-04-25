@@ -19,6 +19,10 @@ public class Track {
         this.trackName = trackName;
     }
 
+    public Track(String trackName) {
+        this.trackName = trackName;
+    }
+
     public Track() {
 
     }

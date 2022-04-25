@@ -22,6 +22,10 @@ public class Weather {
         this.weatherName = weatherName;
     }
 
+    public Weather(String weatherName) {
+        this.weatherName = weatherName;
+    }
+
     public Weather() {
 
     }
