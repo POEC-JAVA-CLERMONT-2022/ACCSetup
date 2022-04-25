@@ -5,17 +5,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ipme.poec.ACCSetup.Service.SessionService;
+import com.ipme.poec.ACCSetup.Service.CarService;
 import com.ipme.poec.ACCSetup.Service.SetupService;
+import com.ipme.poec.ACCSetup.Service.TrackService;
+import com.ipme.poec.ACCSetup.Service.WeatherService;
 
 @Controller
 public class PublicController {
 	
 	@Autowired
-	private SessionService sessionService;
+	private SetupService setupService;
 	
 	@Autowired
-	private SetupService setupService;
+	private CarService carService;
+	
+	@Autowired
+	private TrackService trackService;
+	
+	@Autowired
+	private WeatherService weatherService;
 	
 	@GetMapping("/")
 	public ModelAndView index( ) {
@@ -26,7 +34,7 @@ public class PublicController {
 	public ModelAndView carList( ) {
 		ModelAndView mAV = new ModelAndView("cars/car-list");
 		
-		mAV.addObject("cars", sessionService.findAllCars());
+		mAV.addObject("cars", carService.findAllCars());
 
         return mAV;
 	}
@@ -35,7 +43,7 @@ public class PublicController {
 	public ModelAndView trackList( ) {
 		ModelAndView mAV = new ModelAndView("tracks/track-list");
 		
-		mAV.addObject("tracks", sessionService.findAllTracks());
+		mAV.addObject("tracks", trackService.findAllTracks());
 
         return mAV;
 	}
@@ -44,7 +52,7 @@ public class PublicController {
 	public ModelAndView weatherList( ) {
 		ModelAndView mAV = new ModelAndView("weathers/weather-list");
 		
-		mAV.addObject("weathers", setupService.findAllWeathers());
+		mAV.addObject("weathers", weatherService.findAllWeathers());
 
         return mAV;
 	}

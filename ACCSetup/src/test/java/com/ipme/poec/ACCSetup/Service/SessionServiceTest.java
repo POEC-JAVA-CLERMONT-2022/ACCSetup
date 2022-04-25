@@ -28,6 +28,7 @@ class SessionServiceTest {
 		when(mockedSessionRepository.save(Mockito.any(Session.class))).thenReturn(new Session(0, null, null, null, null, null));
 		sessionService.createSession("name007", null, null, null, null);
 		Session testSession = sessionService.getSessionByName("name007");
+		System.out.println("name007");
 		System.out.println(sessionService.getSessionByName("name007"));
 		// test null
 		assertNotNull(testSession);
