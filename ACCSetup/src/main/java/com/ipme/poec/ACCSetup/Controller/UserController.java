@@ -27,12 +27,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("users/search")
+    @GetMapping()
     public List<User> getUsers(){
         return userService.findAll();
     }
 
-    @PostMapping("users/add")   //mapping de la méthode
+    @PostMapping(value="/add",produces = "application/json")   //mapping de la méthode
     public void createUser(String name, String password){
         userService.createUser(name,password);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
     }
