@@ -6,15 +6,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ipme.poec.ACCSetup.Service.CarService;
-import com.ipme.poec.ACCSetup.Service.SetupService;
+import com.ipme.poec.ACCSetup.Service.ConditionService;
 import com.ipme.poec.ACCSetup.Service.TrackService;
 import com.ipme.poec.ACCSetup.Service.WeatherService;
 
 @Controller
 public class PublicController {
-	
-	@Autowired
-	private SetupService setupService;
 	
 	@Autowired
 	private CarService carService;
@@ -24,6 +21,9 @@ public class PublicController {
 	
 	@Autowired
 	private WeatherService weatherService;
+	
+	@Autowired
+	private ConditionService conditionService;
 	
 	@GetMapping("/")
 	public ModelAndView index( ) {
@@ -61,7 +61,7 @@ public class PublicController {
 	public ModelAndView conditionList( ) {
 		ModelAndView mAV = new ModelAndView("conditions/condition-list");
 		
-		mAV.addObject("conditions", setupService.findAllConditions());
+		mAV.addObject("conditions", conditionService.findAllConditions());
 
         return mAV;
 	}
