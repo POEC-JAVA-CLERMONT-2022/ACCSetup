@@ -23,7 +23,7 @@ public class SessionController {
     private UserService userService;
 
 
-    @GetMapping("/search")
+    @GetMapping
     public List<Session> getSessions() {
         return sessionService.findAllSessions();
     }
@@ -33,6 +33,16 @@ public class SessionController {
 
         sessionService.createSession(sessionName, sessionDate, track, car, user);
 
+    }
+
+    @PutMapping("/edit")
+    public void updateSession(Session session, String sessionNameUpdate, LocalDate sessionDateUpdate) {
+        sessionService.updateSession(session, sessionNameUpdate, sessionDateUpdate);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteSession(Session session) {
+        sessionService.deleteSession(session.getSessionId());
     }
 
 }

@@ -14,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -98,5 +99,25 @@ public class SessionTests {
         sessionService.createSession("validSessionTest", LocalDate.parse("2022-04-01"), trackTest, carTest, userTest2);
         Session sessionTest = sessionService.getSessionByName("validSessionTest");
         assertThat(sessionTest.getSessionDate()).isEqualTo(LocalDate.parse("2022-04-01"));
+    }
+
+    @Test
+    void deleteSessionTest() {
+        Car carTest = new Car("Citronault Pipo");
+        carService.saveCar(carTest);
+        Track trackTest = new Track("Charade");
+        trackService.saveTrack(trackTest);
+        User userTest2 = new User("validName", "validPassword");
+        userService.saveUser(userTest2);
+
+        sessionService.createSession("validSessionTest", LocalDate.parse("2022-04-01"), trackTest, carTest, userTest2);
+
+        Session sessionToDelete = sessionService.getSessionByName("validSessionTest");
+
+        sessionService.deleteSession(sessionToDelete.getSessionId());
+
+        List<Session> sessions = sessionService.findAllSessions();
+
+        assertThat(sessions.contains(sessionToDelete)).isFalse();
     }
 }
