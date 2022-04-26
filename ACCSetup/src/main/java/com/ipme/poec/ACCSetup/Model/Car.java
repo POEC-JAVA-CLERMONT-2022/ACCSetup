@@ -22,11 +22,6 @@ public class Car {
 		this.carName = carName;
 	}
 
-	public Car(int carId, String carName) {
-		this.carId = carId;
-		this.carName = carName;
-	}
-
 	public Car() {
 
 	}
@@ -65,7 +60,5 @@ public class Car {
 		Car other = (Car) obj;
 		return Objects.equals(carId, other.carId) && Objects.equals(carName, other.carName);
 	}
-	
-	
-	
+
 }

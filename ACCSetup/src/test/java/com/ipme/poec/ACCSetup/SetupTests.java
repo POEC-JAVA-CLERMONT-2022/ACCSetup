@@ -113,4 +113,34 @@ public class SetupTests {
         Setup setupTest = setupService.getSetupByName("VraimentUnSetupValide");
         assertThat(setupTest.getSetupFLCamber()).isEqualTo(0.1f);
     }
+
+    @Test
+    void deleteSetupTest() {
+        Weather weatherTest = new Weather(1, "SUNNY");
+        List<Integer> weathers = new LinkedList<>();
+        weathers.add(1);
+        weatherService.saveWeather(weatherTest);
+
+        Condition conditionTest = new Condition(1, "OPTIMAL");
+        List<Integer> conditions = new LinkedList<>();
+        conditions.add(1);
+        conditionService.saveCondition(conditionTest);
+
+        Car carTest2 = new Car("Fiat Multipla");
+        carService.saveCar(carTest2);
+        Track trackTest2 = new Track("Charade");
+        trackService.saveTrack(trackTest2);
+        User userTest3 = new User("validName", "validPassword");
+        userService.saveUser(userTest3);
+        sessionService.createSession("validSessionTest2", LocalDate.parse("2022-04-02"), trackTest2, carTest2, userTest3);
+        Session sessionTest = sessionService.getSessionByName("validSessionTest2");
+
+        setupService.createSetup("valid_setup", weathers, conditions, sessionTest);
+        Setup setupToDelete = setupService.getSetupByName("valid_setup");
+
+        setupService.deleteSetup(setupToDelete.getSetupId());
+
+        List<Setup> setups = setupService.findAll();
+        assertThat(setups.contains(setupToDelete)).isFalse();
+    }
 }

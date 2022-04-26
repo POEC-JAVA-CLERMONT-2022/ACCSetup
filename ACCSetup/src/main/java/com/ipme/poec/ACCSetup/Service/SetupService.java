@@ -4,6 +4,7 @@ import com.ipme.poec.ACCSetup.Model.*;
 import com.ipme.poec.ACCSetup.Repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class SetupService {
 
     @Autowired
@@ -103,7 +105,7 @@ public class SetupService {
         setupRepository.deleteById(id);
     } //méthode de suppression d'un user, selon son userId
 
-    public void updateSetup(Setup setup, String nameToUpdate,float setupFLCamberToUpdate,float setupFRCamberToUpdate,float setupRLCamberToUpdate,float setupRRCamberToUpdate,float setupFLPsiToUpdate,float setupFRPsiToUpdate,float setupRLPsiToUpdate,float setupRRPsiToUpdate,float setupFLToeToUpdate,float setupFRToeToUpdate,float setupRLToeToUpdate,float setupRRToeToUpdate,float setupFLCasterToUpdate,float setupFRCasterToUpdate,String setupDescToUpdate,List<Integer> conditionsToUpdate,List<Integer> weathersToUpdate) {
+    public void updateSetup(Setup setup, String nameToUpdate, float setupFLCamberToUpdate, float setupFRCamberToUpdate, float setupRLCamberToUpdate, float setupRRCamberToUpdate, float setupFLPsiToUpdate, float setupFRPsiToUpdate, float setupRLPsiToUpdate, float setupRRPsiToUpdate, float setupFLToeToUpdate, float setupFRToeToUpdate, float setupRLToeToUpdate, float setupRRToeToUpdate, float setupFLCasterToUpdate, float setupFRCasterToUpdate, String setupDescToUpdate, List<Integer> conditionsToUpdate, List<Integer> weathersToUpdate) {
         setup.setSetupName(nameToUpdate);
         setup.setSetupFLCamber(setupFLCamberToUpdate);
         setup.setSetupFRCamber(setupFRCamberToUpdate);
@@ -132,7 +134,7 @@ public class SetupService {
         setupRepository.save(setup);
     }
 
-    public void updateSetupByName(String setupName, String nameToUpdate,float setupFLCamberToUpdate,float setupFRCamberToUpdate,float setupRLCamberToUpdate,float setupRRCamberToUpdate,float setupFLPsiToUpdate,float setupFRPsiToUpdate,float setupRLPsiToUpdate,float setupRRPsiToUpdate,float setupFLToeToUpdate,float setupFRToeToUpdate,float setupRLToeToUpdate,float setupRRToeToUpdate,float setupFLCasterToUpdate,float setupFRCasterToUpdate,String setupDescToUpdate,List<Integer> conditionsToUpdate,List<Integer> weathersToUpdate) {
+    public void updateSetupByName(String setupName, String nameToUpdate, float setupFLCamberToUpdate, float setupFRCamberToUpdate, float setupRLCamberToUpdate, float setupRRCamberToUpdate, float setupFLPsiToUpdate, float setupFRPsiToUpdate, float setupRLPsiToUpdate, float setupRRPsiToUpdate, float setupFLToeToUpdate, float setupFRToeToUpdate, float setupRLToeToUpdate, float setupRRToeToUpdate, float setupFLCasterToUpdate, float setupFRCasterToUpdate, String setupDescToUpdate, List<Integer> conditionsToUpdate, List<Integer> weathersToUpdate) {
         Setup setup = setupRepository.getBySetupName(setupName);
         setup.setSetupName(nameToUpdate);
         setup.setSetupFLCamber(setupFLCamberToUpdate);

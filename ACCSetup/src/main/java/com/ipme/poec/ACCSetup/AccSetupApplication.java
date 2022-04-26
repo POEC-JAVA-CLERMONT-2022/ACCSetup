@@ -38,6 +38,7 @@ public class AccSetupApplication {
 		SpringApplication.run(AccSetupApplication.class, args);
 
 	}
+<<<<<<< HEAD
 	
 	
 
@@ -62,4 +63,6 @@ public class AccSetupApplication {
 //		};
 //	}
 
+=======
+>>>>>>> 4565396efa0565cbb57ba1efd9e5b106a3e5830f
 }
