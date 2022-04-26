@@ -13,8 +13,6 @@ import java.util.List;
 @RequestMapping("users")
 public class UserController {
 
-    @Autowired
-    private ModelMapper modelMapper;
 
     @Autowired
     private UserService userService;

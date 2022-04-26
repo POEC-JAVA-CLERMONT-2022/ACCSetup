@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertThrows;
 
 @SpringBootTest
 @Transactional
@@ -48,13 +50,19 @@ public class UserTests {
     void saveUserTest() {
         String name = "test";
         String password = "pass";
+        String nameKo = "testKO";
+        String passKo = null;
 
         User user1 = new User(1, name, password);
+        User user2 = new User(nameKo,passKo);
         userService.saveUser(user1);
 
         User userTest = userService.getByName("test");
 
         assertThat(userTest.getUserName()).isEqualTo("test");
+        Exception exception = assertThrows(ConstraintViolationException.class, () -> {
+            userService.saveUser(user2);
+        });
     }
 
     @Test
