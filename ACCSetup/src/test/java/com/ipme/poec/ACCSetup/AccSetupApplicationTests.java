@@ -213,14 +213,6 @@ class AccSetupApplicationTests {
         assertThat(sessionTest.getSessionDate()).isEqualTo(LocalDate.parse("2022-04-01"));
     }
 
-//    @Test
-//    void deleteUserTest() {
-//        User userToDelete = new User(200,"UwU", "Password");
-//        userService.saveUser(userToDelete);
-//        User userToTest = new User("UwU", "Password");
-//        userService.deleteUser(200);
-//        assertThat(userService.getByName("UwU")).isEqualTo(userToTest);
-//    }
 
 }
 
