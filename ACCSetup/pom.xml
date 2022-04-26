@@ -19,7 +19,6 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
-<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -30,8 +29,6 @@
 <!--			<artifactId>spring-boot-starter</artifactId>-->
 <!--			<version>2.6.5</version>-->
 <!--		</dependency>-->
-=======
->>>>>>> 4565396efa0565cbb57ba1efd9e5b106a3e5830f
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
