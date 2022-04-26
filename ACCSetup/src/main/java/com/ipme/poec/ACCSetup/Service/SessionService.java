@@ -98,7 +98,18 @@ public class SessionService {
     } //méthode pour récupérer un user, qui est forcément lié à une session
 
 
-    public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
+//    public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
+//        Session session = new Session();
+//        session.setSessionName(sessionName);
+//        session.setSessionDate(sessionDate);
+//        session.setCar(car);
+//        session.setTrack(track);
+//        session.setUser(user);
+//
+//        sessionRepository.saveAndFlush(session);
+//    }
+
+    public Session createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
         Session session = new Session();
         session.setSessionName(sessionName);
         session.setSessionDate(sessionDate);
@@ -107,8 +118,10 @@ public class SessionService {
         session.setUser(user);
 
         sessionRepository.saveAndFlush(session);
+        
+        return session;
     }
-
+    
     public void deleteSession(Integer id) {
         sessionRepository.deleteById(id);
     } //méthode de suppression d'un user, selon son userId

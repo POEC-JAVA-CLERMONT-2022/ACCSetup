@@ -45,6 +45,19 @@ public class AccSetupApplication {
 
 	}
 	
+//	@EventListener(classes = {ApplicationStartedEvent.class})
+//	public void applicationStarted() {
+//		System.out.println("Application démarée");
+//		Session testSession = sessionService.createSession("sessionTest", LocalDate.now(), null, null, null);
+//		System.out.println(testSession);
+//		
+//	}
+
+	
+	
+	
+	Session testSession = sessionService.createSession("sessionTest", LocalDate.now(), null, null, null);
+
 
 //	@EventListener(classes = {ApplicationStartedEvent.class})
 //	public void applicationStarted() {
