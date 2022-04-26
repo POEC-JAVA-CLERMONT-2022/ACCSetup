@@ -15,8 +15,11 @@
 	<description>Projet ACCSetup</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.organization>poec-java-clermont-2022</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -27,6 +30,8 @@
 <!--			<artifactId>spring-boot-starter</artifactId>-->
 <!--			<version>2.6.5</version>-->
 <!--		</dependency>-->
+=======
+>>>>>>> 4565396efa0565cbb57ba1efd9e5b106a3e5830f
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -119,14 +124,6 @@
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.6.4</version>
 		</dependency>
-
-
-		<!--		<dependency>-->
-<!--			<groupId>org.springframework.shell</groupId>-->
-<!--			<artifactId>spring-shell-shell1-adapter</artifactId>-->
-<!--			<version>2.0.1.RELEASE</version>-->
-<!--			<scope>compile</scope>-->
-<!--		</dependency>-->
 	</dependencies>
 
 	<build>
