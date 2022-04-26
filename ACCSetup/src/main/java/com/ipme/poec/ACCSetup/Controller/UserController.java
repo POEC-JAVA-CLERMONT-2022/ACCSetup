@@ -2,58 +2,46 @@ package com.ipme.poec.ACCSetup.Controller;
 
 import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Service.UserService;
+import com.ipme.poec.ACCSetup.Service.dto.UserDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.context.event.EventListener;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("users")
 public class UserController {
 
-    @Autowired
-    private ModelMapper modelMapper;
 
     @Autowired
     private UserService userService;
 
     @GetMapping()
-    public List<User> getUsers(){
+    public List<User> getUsers() {
         return userService.findAll();
     }
 
-    @PostMapping(value="/add",produces = "application/json")   //mapping de la méthode
-    public void createUser(String name, String password){
-        userService.createUser(name,password);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
+    @PostMapping(value = "/add", produces = "application/json")   //mapping de la méthode
+    public void createUser(String name, String password) {
+        userService.createUser(name, password);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
     }
 
-//    @PostMapping("users/add")
-//    public User create(){
-//        return userService.createUser();
-//    }
+    @PutMapping(value = "/nameEdit", consumes = "application/json", produces = "application/json")
+    public void updateUserName(User user, String name) {
+        userService.updateUserName(user, name);
+    }
 
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ExceptionHandler(MethodArgumentNotValidException.class)
-//    public Map<String, String> handleValidationExceptions(
-//            MethodArgumentNotValidException ex) {
-//        Map<String, String> errors = new HashMap<>();
-//        ex.getBindingResult().getAllErrors().forEach((error) -> {
-//            String fieldName = ((FieldError) error).getField();
-//            String errorMessage = error.getDefaultMessage();
-//            errors.put(fieldName, errorMessage);
-//        });
-//        return errors;
-//    }
+    @PutMapping(value = "/passwordEdit", consumes = "application/json", produces = "application/json")
+    public void updateUserPassword(User user, String password) {
+        userService.updateUserPassword(user, password);
+    }
 
-    // standard constructors / other methods
+    @DeleteMapping(value = "/delete", consumes = "application/json")
+    public void deleteUser(User user) {
+        userService.deleteUser(user.getUserId());
+    }
+
+
+
 }
