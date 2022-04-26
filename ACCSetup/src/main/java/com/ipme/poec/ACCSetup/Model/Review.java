@@ -11,16 +11,16 @@ public class Review {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "reviewId", length = 11)
-	private Long reviewId;
+	@Column(name = "id", length = 11)
+	private Long id;
 	
-	@Column(name = "reviewTitle", length = 20)
+	@Column(name = "title", length = 20)
 	@NotNull
-	private String reviewTitle;
+	private String title;
 	
-	@Column(name = "reviewComment", length = 144)
+	@Column(name = "comment", length = 144)
 	@NotNull
-	private String reviewComment;
+	private String comment;
 	
 	@JoinColumn(name = "user_id")
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -31,8 +31,8 @@ public class Review {
 	private Setup setup;
 
 	public Review(String reviewTitle, String reviewComment) {
-		this.reviewTitle = reviewTitle;
-		this.reviewComment = reviewComment;
+		this.title = reviewTitle;
+		this.comment = reviewComment;
 	}
 	
 	public Review(String reviewTitle, String reviewComment, User user, Setup setup) {
@@ -57,16 +57,16 @@ public class Review {
 		this.setup = setup;
 	}
 
-	public Long getReviewId() {
-		return reviewId;
+	public Long getId() {
+		return id;
 	}
 
-	public String getReviewTitle() {
-		return reviewTitle;
+	public String getTitle() {
+		return title;
 	}
 
-	public String getReviewComment() {
-		return reviewComment;
+	public String getComment() {
+		return comment;
 	}
 
 

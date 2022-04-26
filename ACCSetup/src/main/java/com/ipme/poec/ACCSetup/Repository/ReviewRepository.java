@@ -9,7 +9,7 @@ import com.ipme.poec.ACCSetup.Model.Setup;
 
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 	
-	Review getById(String id);
+	Review getById(Long id);
 	
 	Review getByTitle(String title);
 	
