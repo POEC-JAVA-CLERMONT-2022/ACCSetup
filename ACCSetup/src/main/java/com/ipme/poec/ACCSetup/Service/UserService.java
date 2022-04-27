@@ -18,10 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class UserService {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f84fd6732516f40dd86109be88b321a728b4763b
     @Autowired
     private UserRepository userRepository;
 
@@ -96,11 +92,7 @@ public class UserService {
     }
 
     public User convertToUser(UserDTO userDTO) throws ParseException {
-<<<<<<< HEAD
     	ModelMapper modelMapper = new ModelMapper();
-=======
-        ModelMapper modelMapper = new ModelMapper();
->>>>>>> f84fd6732516f40dd86109be88b321a728b4763b
         User user = modelMapper.map(userDTO, User.class);
         User oldUser = userRepository.getById(userDTO.getId());
         user.setUserName(oldUser.getUserName());
