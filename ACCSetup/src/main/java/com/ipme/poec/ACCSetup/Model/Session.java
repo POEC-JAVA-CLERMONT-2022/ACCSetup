@@ -61,10 +61,6 @@ public class Session {
 
     }
 
-    public int getSessionID() {
-        return sessionId;
-    }
-
     public String getSessionName() {
         return sessionName;
     }

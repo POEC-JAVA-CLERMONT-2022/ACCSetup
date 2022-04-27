@@ -13,53 +13,38 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.EventListener;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class AccSetupApplication {
 
-	@Bean
-	public ModelMapper modelMapper() {
-		return new ModelMapper();
-	}
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
 
-	@Autowired
-	private SessionService sessionService;
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 
-	@Autowired
-	private SetupService setupService;
+    @Autowired
+    private SessionService sessionService;
 
-	@Autowired
-	private DisplayService displayService;
+    @Autowired
+    private SetupService setupService;
 
-	@Autowired
-	private UserService userService;
+    @Autowired
+    private DisplayService displayService;
 
-	public static void main(String[] args) {
-		SpringApplication.run(AccSetupApplication.class, args);
-
-	}
-	
-	
-
-//	@EventListener(classes = {ApplicationStartedEvent.class})
-//	public void applicationStarted() {
-//		System.out.println("Application démarée");
-//		User user = new User("p","b");
-//		userService.createUser(user);
-//	}
+    @Autowired
+    private UserService userService;
 
 
+    public static void main(String[] args) {
+        SpringApplication.run(AccSetupApplication.class, args);
 
-
-//	@Bean
-//	public CommandLineRunner run(UserRepository userRepository) throws Exception {
-//		return (String[] args) -> {
-//			User user1 = new User(1,"Bob", "bob@domain.com");
-//			User user2 = new User(2,"Jenny", "jenny@domain.com");
-//			userRepository.save(user1);
-//			userRepository.save(user2);
-//			userRepository.findAll().forEach(System.out::println);
-//		};
-//	}
+    }
 
 }

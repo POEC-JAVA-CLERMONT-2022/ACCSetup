@@ -10,7 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.ConstraintViolationException;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertThrows;
 
 @SpringBootTest
 @Transactional
@@ -43,15 +47,25 @@ public class UserTests {
 
     @Test
     void saveUserTest() {
+        //on initialise les données de nos users, le KO est fait pour planter
         String name = "test";
         String password = "pass";
+        String nameKo = "testKO";
+        String passKo = null;
 
-        User user1 = new User(1, name, password);
+        //on crée nos entités
+        User user1 = new User(name, password);
+        User user2 = new User(nameKo, passKo);
+        //on sauvegarde en base l'utilisateur valide
         userService.saveUser(user1);
-
+        //on récupère l'utilisateur valide en base
         User userTest = userService.getByName("test");
-
+        //on teste la relation entre entité locale et base de données
         assertThat(userTest.getUserName()).isEqualTo("test");
+        //on teste de charger l'utilisateur invalide en récupérant l'exception attendue
+        Exception exception = assertThrows(ConstraintViolationException.class, () -> {
+            userService.saveUser(user2);
+        });
     }
 
     @Test
@@ -71,10 +85,10 @@ public class UserTests {
 
     @Test
     void updateUserPasswordTest() {
-        userService.createUser("TourneJos?", "pass");
-        User userTest = userService.getByName("TourneJos?");
+        userService.createUser("TourneJose", "pass");
+        User userTest = userService.getByName("TourneJose");
         userService.updateUserPassword(userTest, "FranckyVincent");
-        User userToBeTested = userService.getByName("TourneJos?");
+        User userToBeTested = userService.getByName("TourneJose");
         assertThat(userToBeTested.getUserPassword()).isEqualTo("FranckyVincent");
     }
 
@@ -85,5 +99,14 @@ public class UserTests {
 
         User userToTest = userService.getByName("UwU");
         assertThat(userToTest.getUserName()).isEqualTo("UwU");
+    }
+
+    @Test
+    void deleteUserTest() {
+        userService.createUser("RandomDuStunfest", "sbire");
+        User userToDelete = userService.getByName("RandomDuStunfest");
+        userService.deleteUser(userToDelete.getUserId());
+        List<User> users = userService.findAll();
+        assertThat(users.contains(userToDelete)).isFalse();
     }
 }

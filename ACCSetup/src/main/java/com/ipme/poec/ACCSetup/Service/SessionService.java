@@ -15,8 +15,10 @@ import com.ipme.poec.ACCSetup.Model.Session;
 import com.ipme.poec.ACCSetup.Repository.CarRepository;
 import com.ipme.poec.ACCSetup.Repository.SessionRepository;
 import com.ipme.poec.ACCSetup.Repository.TrackRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class SessionService {
 
 
