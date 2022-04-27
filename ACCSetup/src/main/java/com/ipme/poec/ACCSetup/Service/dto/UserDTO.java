@@ -16,6 +16,10 @@ public class UserDTO {
 
     private List<SessionDTO> sessions;
 
+    public UserDTO() {
+
+    }
+
     public UserDTO(int id, String name, String password, List<SessionDTO> sessions) {
         this.id = id;
         this.name = name;

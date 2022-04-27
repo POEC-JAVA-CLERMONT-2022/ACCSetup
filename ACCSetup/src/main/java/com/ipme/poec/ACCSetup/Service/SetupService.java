@@ -105,6 +105,10 @@ public class SetupService {
         setupRepository.deleteById(id);
     } //méthode de suppression d'un user, selon son userId
 
+    public void deleteAllSetups() {
+        setupRepository.deleteAll();
+    }
+
     public void updateSetup(Setup setup, String nameToUpdate, float setupFLCamberToUpdate, float setupFRCamberToUpdate, float setupRLCamberToUpdate, float setupRRCamberToUpdate, float setupFLPsiToUpdate, float setupFRPsiToUpdate, float setupRLPsiToUpdate, float setupRRPsiToUpdate, float setupFLToeToUpdate, float setupFRToeToUpdate, float setupRLToeToUpdate, float setupRRToeToUpdate, float setupFLCasterToUpdate, float setupFRCasterToUpdate, String setupDescToUpdate, List<Integer> conditionsToUpdate, List<Integer> weathersToUpdate) {
         setup.setSetupName(nameToUpdate);
         setup.setSetupFLCamber(setupFLCamberToUpdate);
