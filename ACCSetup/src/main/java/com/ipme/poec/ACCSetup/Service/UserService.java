@@ -21,9 +21,6 @@ public class UserService {
 
 
     @Autowired
-    private ModelMapper modelMapper;
-
-    @Autowired
     private UserRepository userRepository;
 
 
@@ -77,6 +74,7 @@ public class UserService {
     }
 
     public UserDTO convertToDto(User user) {
+        ModelMapper modelMapper = new ModelMapper();
         UserDTO userDTO = modelMapper.map(user, UserDTO.class);
         return userDTO;
     }
@@ -96,6 +94,7 @@ public class UserService {
     }
 
     public User convertToUser(UserDTO userDTO) throws ParseException {
+    	ModelMapper modelMapper = new ModelMapper();
         User user = modelMapper.map(userDTO, User.class);
         User oldUser = userRepository.getById(userDTO.getId());
         user.setUserName(oldUser.getUserName());
