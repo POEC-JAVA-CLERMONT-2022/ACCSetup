@@ -1,16 +1,20 @@
 package com.ipme.poec.ACCSetup;
 
-
+import ch.qos.logback.core.net.SyslogOutputStream;
+import com.ipme.poec.ACCSetup.Model.User;
+import com.ipme.poec.ACCSetup.Repository.SessionRepository;
+import com.ipme.poec.ACCSetup.Repository.UserRepository;
+import com.ipme.poec.ACCSetup.Service.*;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.annotation.Bean;
-<<<<<<< HEAD
 import org.springframework.context.event.EventListener;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.PasswordEncoder;
-=======
->>>>>>> 4e80c2a4280e14a76f2499602236acc495c36955
 
 @SpringBootApplication
 public class AccSetupApplication {
@@ -20,7 +24,6 @@ public class AccSetupApplication {
         return new ModelMapper();
     }
 
-<<<<<<< HEAD
 //    @Bean
 //    public PasswordEncoder passwordEncoder() {
 //        return new BCryptPasswordEncoder();
@@ -43,12 +46,5 @@ public class AccSetupApplication {
         SpringApplication.run(AccSetupApplication.class, args);
 
     }
-=======
-
-	public static void main(String[] args) {
-		SpringApplication.run(AccSetupApplication.class, args);
-
-	}
->>>>>>> 4e80c2a4280e14a76f2499602236acc495c36955
 
 }
