@@ -41,3 +41,5 @@ Il accède à un second menu, où il a accès aux valeurs de la classe réglage 
 - Un utilisateur peut spécifier la température la météo et l'état de la piste pour la session via des listes (PRIO 1)
 
 - Un utilisateur peut consulter les différents réglages d'une même session (PRIO 1)
+
+- Un utilisateur peut commenter les setups des autres utilisateurs
