@@ -11,17 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ipme.poec.ACCSetup.Model.User;
-import com.ipme.poec.ACCSetup.Repository.SessionRepository;
 import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
 public class UserService {
-
-
-    @Autowired
-    private ModelMapper modelMapper;
 
     @Autowired
     private UserRepository userRepository;
@@ -77,18 +72,19 @@ public class UserService {
     }
 
     public UserDTO convertToDto(User user) {
+        ModelMapper modelMapper = new ModelMapper();
         UserDTO userDTO = modelMapper.map(user, UserDTO.class);
         return userDTO;
     }
 
-    public List<UserDTO> convertUsersToDTO(List<User> users){
-        if (users != null){
-            List<UserDTO> userDTOS = new LinkedList<>();
-            for (User user : users){
-                UserDTO userDTO = convertToDto(user);
-                userDTOS.add(userDTO);
+    public List<UserDTO> convertUsersToDTO(List<User> users){       //conversion liste user vers DTO
+        if (users != null){                                         //si on trouve des users
+            List<UserDTO> userDTOS = new LinkedList<>();            //on crée la liste de DTO
+            for (User user : users){                                //pour chaque user de la liste
+                UserDTO userDTO = convertToDto(user);               //on crée un DTO à partir du user
+                userDTOS.add(userDTO);                              //on ajoute le DTO à la liste
             }
-            return userDTOS;
+            return userDTOS;                                        //on renvoie la liste de DTO
         }
         else {
             return null; //ajout d'exception (pas de users à convertir)?
@@ -96,6 +92,7 @@ public class UserService {
     }
 
     public User convertToUser(UserDTO userDTO) throws ParseException {
+        ModelMapper modelMapper = new ModelMapper();
         User user = modelMapper.map(userDTO, User.class);
         User oldUser = userRepository.getById(userDTO.getId());
         user.setUserName(oldUser.getUserName());

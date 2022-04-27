@@ -2,7 +2,6 @@ package com.ipme.poec.ACCSetup;
 
 
 import com.ipme.poec.ACCSetup.Model.User;
-import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import com.ipme.poec.ACCSetup.Service.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -48,18 +47,22 @@ public class UserTests {
 
     @Test
     void saveUserTest() {
+        //on initialise les données de nos users, le KO est fait pour planter
         String name = "test";
         String password = "pass";
         String nameKo = "testKO";
         String passKo = null;
 
-        User user1 = new User(1, name, password);
-        User user2 = new User(nameKo,passKo);
+        //on crée nos entités
+        User user1 = new User(name, password);
+        User user2 = new User(nameKo, passKo);
+        //on sauvegarde en base l'utilisateur valide
         userService.saveUser(user1);
-
+        //on récupère l'utilisateur valide en base
         User userTest = userService.getByName("test");
-
+        //on teste la relation entre entité locale et base de données
         assertThat(userTest.getUserName()).isEqualTo("test");
+        //on teste de charger l'utilisateur invalide en récupérant l'exception attendue
         Exception exception = assertThrows(ConstraintViolationException.class, () -> {
             userService.saveUser(user2);
         });
@@ -100,7 +103,7 @@ public class UserTests {
 
     @Test
     void deleteUserTest() {
-        userService.createUser("RandomDuStunfest","sbire");
+        userService.createUser("RandomDuStunfest", "sbire");
         User userToDelete = userService.getByName("RandomDuStunfest");
         userService.deleteUser(userToDelete.getUserId());
         List<User> users = userService.findAll();
