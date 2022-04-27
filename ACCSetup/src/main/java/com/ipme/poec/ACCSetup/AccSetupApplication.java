@@ -41,38 +41,10 @@ public class AccSetupApplication {
     @Autowired
     private UserService userService;
 
-<<<<<<< HEAD
-	}
 
-	
-	
-
-//	@EventListener(classes = {ApplicationStartedEvent.class})
-//	public void applicationStarted() {
-//		System.out.println("Application démarée");
-//		User user = new User("p","b");
-//		userService.createUser(user);
-//	}
-
-
-
-
-//	@Bean
-//	public CommandLineRunner run(UserRepository userRepository) throws Exception {
-//		return (String[] args) -> {
-//			User user1 = new User(1,"Bob", "bob@domain.com");
-//			User user2 = new User(2,"Jenny", "jenny@domain.com");
-//			userRepository.save(user1);
-//			userRepository.save(user2);
-//			userRepository.findAll().forEach(System.out::println);
-//		};
-//	}
-
-
-=======
     public static void main(String[] args) {
         SpringApplication.run(AccSetupApplication.class, args);
 
     }
->>>>>>> f84fd6732516f40dd86109be88b321a728b4763b
+
 }
