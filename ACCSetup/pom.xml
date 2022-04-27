@@ -121,8 +121,16 @@
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.6.4</version>
 		</dependency>
-	</dependencies>
+		
+	    <dependency>
+        	<groupId>org.jeasy</groupId>
+        	<artifactId>easy-random-core</artifactId>
+        	<version>5.0.0</version>
+        	<scope>test</scope>
+		</dependency>
 
+	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>

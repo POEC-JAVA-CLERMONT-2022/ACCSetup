@@ -14,7 +14,7 @@ public class Review {
 	@Column(name = "id", length = 11)
 	private Long id;
 	
-	@Column(name = "title", length = 20)
+	@Column(name = "title", length = 255)
 	@NotNull
 	private String title;
 	

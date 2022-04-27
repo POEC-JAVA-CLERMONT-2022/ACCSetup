@@ -6,6 +6,6 @@ public interface DTOConverter<ENTITY, DTO> {
 	
 	DTO converterTo(ENTITY entity);
 	
-	List<DTO> convertTo(List<ENTITY> reviews);
+	List<DTO> convertTo(List<ENTITY> items);
 
 }

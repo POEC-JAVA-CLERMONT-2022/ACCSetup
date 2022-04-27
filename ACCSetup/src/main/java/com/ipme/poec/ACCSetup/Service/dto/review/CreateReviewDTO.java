@@ -22,6 +22,11 @@ public class CreateReviewDTO {
 	public CreateReviewDTO() {
 	}
 
+	public CreateReviewDTO(String title, String comment) {
+		this.title = title;
+		this.comment = comment;
+	}
+
 	public CreateReviewDTO(String title, String comment, User user,
 			Setup setup) {
 		this.title = title;
@@ -29,7 +34,7 @@ public class CreateReviewDTO {
 		this.user = user;
 		this.setup = setup;
 	}
-
+	
 	public String getTitle() {
 		return title;
 	}
