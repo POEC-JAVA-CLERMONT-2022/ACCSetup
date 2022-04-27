@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c6650300-d712-40d7-bcc1-99487ff38fb1" name="Changes" comment="Mise à jour architecture projet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/AccSetupApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/AccSetupApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Model/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Model/Condition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserControllerIntegrationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserMockServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserMockServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/AccSetupApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/AccSetupApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Model/Condition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Model/Condition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Service/SetupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Service/SetupService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +114,7 @@
       <recent name="C:\Users\PC3\Desktop\ACCSetup\ACCSetup\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserMockServiceTest.getUserTest">
+  <component name="RunManager" selected="Spring Boot.Unnamed">
     <configuration name="SessionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ACCSetup" />
       <extension name="coverage">
@@ -117,37 +125,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
       <option name="MAIN_CLASS_NAME" value="com.ipme.poec.ACCSetup.SessionTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SessionTests.deleteSessionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ACCSetup" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
-      <option name="MAIN_CLASS_NAME" value="com.ipme.poec.ACCSetup.SessionTests" />
-      <option name="METHOD_NAME" value="deleteSessionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SetupTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ACCSetup" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
-      <option name="MAIN_CLASS_NAME" value="com.ipme.poec.ACCSetup.SetupTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,6 +146,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ACCSetup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
+      <option name="MAIN_CLASS_NAME" value="com.ipme.poec.ACCSetup.UserTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTests.saveUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ACCSetup" />
       <extension name="coverage">
@@ -185,6 +177,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.ipme.poec.ACCSetup in ACCSetup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ACCSetup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ACCSetup" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ipme.poec.ACCSetup.AccSetupApplication" />
@@ -194,20 +200,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Unnamed" />
-      <item itemvalue="JUnit.SetupTests" />
-      <item itemvalue="JUnit.SessionTests.deleteSessionTest" />
       <item itemvalue="JUnit.SessionTests" />
       <item itemvalue="JUnit.UserTests.saveUserTest" />
       <item itemvalue="JUnit.UserMockServiceTest.getUserTest" />
+      <item itemvalue="JUnit.UserTests" />
+      <item itemvalue="JUnit.com.ipme.poec.ACCSetup in ACCSetup" />
+      <item itemvalue="Spring Boot.Unnamed" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserMockServiceTest.getUserTest" />
+        <item itemvalue="JUnit.com.ipme.poec.ACCSetup in ACCSetup" />
         <item itemvalue="JUnit.UserTests.saveUserTest" />
+        <item itemvalue="JUnit.UserMockServiceTest.getUserTest" />
+        <item itemvalue="JUnit.UserTests" />
         <item itemvalue="JUnit.SessionTests" />
-        <item itemvalue="JUnit.SessionTests.deleteSessionTest" />
-        <item itemvalue="JUnit.SetupTests" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +248,8 @@
       <workItem from="1649249055573" duration="3490000" />
       <workItem from="1650352163954" duration="18371000" />
       <workItem from="1650438580931" duration="15840000" />
-      <workItem from="1650868597730" duration="22885000" />
+      <workItem from="1650868597730" duration="30648000" />
+      <workItem from="1651041121934" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="Mise à jour architecture projet">
       <created>1647510141197</created>
