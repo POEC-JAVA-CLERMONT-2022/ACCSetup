@@ -18,7 +18,7 @@ public class Review {
 	@NotNull
 	private String title;
 	
-	@Column(name = "comment", length = 144)
+	@Column(name = "comment", columnDefinition = "TEXT")
 	@NotNull
 	private String comment;
 	
