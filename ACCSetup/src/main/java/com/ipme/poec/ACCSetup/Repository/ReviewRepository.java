@@ -6,15 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ipme.poec.ACCSetup.Model.Review;
 import com.ipme.poec.ACCSetup.Model.Setup;
+import com.ipme.poec.ACCSetup.Model.User;
 
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 	
-	Review getById(Long id);
-	
-	Review getByTitle(String title);
-	
-	List<Review> findByUser(Review review);
-
 	List<Review> findBySetup(Setup setup);
+	
+	List<Review> findByUser(User user);
 
 }
