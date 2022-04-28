@@ -7,6 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ipme.poec.ACCSetup.Service.CarService;
 import com.ipme.poec.ACCSetup.Service.ConditionService;
+import com.ipme.poec.ACCSetup.Service.ReviewService;
 import com.ipme.poec.ACCSetup.Service.TrackService;
 import com.ipme.poec.ACCSetup.Service.WeatherService;
 
@@ -24,6 +25,9 @@ public class PublicController {
 	
 	@Autowired
 	private ConditionService conditionService;
+	
+	@Autowired
+	private ReviewService reviewService;
 	
 	@GetMapping("/")
 	public ModelAndView index( ) {
@@ -62,6 +66,15 @@ public class PublicController {
 		ModelAndView mAV = new ModelAndView("conditions/condition-list");
 		
 		mAV.addObject("conditions", conditionService.findAllConditions());
+
+        return mAV;
+	}
+	
+	@GetMapping("/review-list")
+	public ModelAndView reviewList( ) {
+		ModelAndView mAV = new ModelAndView("reviews/review-list");
+		
+		mAV.addObject("reviewsList", reviewService.findAllReview());
 
         return mAV;
 	}
