@@ -1,7 +1,7 @@
 package com.ipme.poec.ACCSetup.Service.dto.review;
 
-import com.ipme.poec.ACCSetup.Model.Setup;
-import com.ipme.poec.ACCSetup.Model.User;
+import com.ipme.poec.ACCSetup.Service.dto.SetupDTO;
+import com.ipme.poec.ACCSetup.Service.dto.UserDTO;
 
 public class ReviewDTO {
 	
@@ -11,9 +11,9 @@ public class ReviewDTO {
 	
 	private String comment;
 	
-	private User user;
+	private UserDTO userDTO;
 	
-	private Setup setup;
+	private SetupDTO setupDTO;
 
 	public ReviewDTO() {
 	}
@@ -23,11 +23,11 @@ public class ReviewDTO {
 		this.comment = comment;
 	}
 
-	public ReviewDTO(String title, String comment, User user, Setup setup) {
+	public ReviewDTO(String title, String comment, UserDTO userDTO, SetupDTO setupDTO) {
 		this.title = title;
 		this.comment = comment;
-		this.user = user;
-		this.setup = setup;
+		this.userDTO = userDTO;
+		this.setupDTO = setupDTO;
 	}
 
 	public Long getId() {
@@ -54,24 +54,20 @@ public class ReviewDTO {
 		this.comment = comment;
 	}
 
-	public User getUser() {
-		return user;
+	public UserDTO getUserDTO() {
+		return userDTO;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserDTO(UserDTO userDTO) {
+		this.userDTO = userDTO;
 	}
 
-	public Setup getSetup() {
-		return setup;
+	public SetupDTO getSetupDTO() {
+		return setupDTO;
 	}
 
-	public void setSetup(Setup setup) {
-		this.setup = setup;
+	public void setSetupDTO(SetupDTO setupDTO) {
+		this.setupDTO = setupDTO;
 	}
-	
-	
-	
-	
 
 }

@@ -14,10 +14,10 @@ public class CreateReviewDTO {
 	private String comment;
 	
 	@NotBlank
-	private User user;
+	private Long userId;
 
 	@NotBlank
-	private Setup setup;
+	private Long setupId;
 
 	public CreateReviewDTO() {
 	}
@@ -27,12 +27,12 @@ public class CreateReviewDTO {
 		this.comment = comment;
 	}
 
-	public CreateReviewDTO(String title, String comment, User user,
-			Setup setup) {
+	public CreateReviewDTO(String title, String comment, Long userId,
+			Long setupId) {
 		this.title = title;
 		this.comment = comment;
-		this.user = user;
-		this.setup = setup;
+		this.userId = userId;
+		this.setupId = setupId;
 	}
 	
 	public String getTitle() {
@@ -51,21 +51,23 @@ public class CreateReviewDTO {
 		this.comment = comment;
 	}
 
-	public User getUser() {
-		return user;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public Setup getSetup() {
-		return setup;
+	public Long getSetupId() {
+		return setupId;
 	}
 
-	public void setSetup(Setup setup) {
-		this.setup = setup;
+	public void setSetupId(Long setupId) {
+		this.setupId = setupId;
 	}
+
+	
 
 	
 }

@@ -29,18 +29,18 @@ public class ReviewService {
 		
 		review = this.reviewRepository.save(review);
 		
-		return reviewConverter.convertTo(review);
+		return reviewConverter.converterTo(review);
 	}
 	
 	public ReviewDTO findById(Long id) {
-		return reviewConverter. convertTo(this.reviewRepository.getById(id));
+		return reviewConverter. converterTo(this.reviewRepository.getById(id));
 	}
 	
-//	@Transactional
-//	public List<Review> findAllReview() {
-//		return reviewRepository.findAll();
-//	}
-//	
+	@Transactional
+	public List<Review> findAllReview() {
+		return reviewRepository.findAll();
+	}
+	
 //	@Transactional
 //	public List<Review> findByUser(User user) {
 //		return reviewRepository.findByUser(user);

@@ -40,10 +40,10 @@ public class ReviewServiceTest {
         }
     }
 
-//	@AfterEach
-//	public void destruct() {
-//		this.reviewRepository.deleteAll();
-//	}
+	@AfterEach
+	public void destruct() {
+		this.reviewRepository.deleteAll();
+	}
 
 	@Test
 	public void testCreateReview() {
