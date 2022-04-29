@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>review-list</title>
+<link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<h1>review-list</h1>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="/">home</a></li>
+		</ul>
+	</nav>
+	 <div class="container-reviews container-a">
+	    <div class="review container-b" th:each="review : ${reviews}">
+            <div class="container-c" th:text="${review.id}">I display the review ID</div>
+            <div class="container-d" th:text="${review.title}">I display the review title</div>
+            <!-- <div class="container-d" th:text="${review.setup}">I display the review setup id</div>
+            <div class="container-d" th:text="${review.user}">I display the review user id</div> -->
+	    </div>
+	</div>
+	
+	
+</body>
+</html>
