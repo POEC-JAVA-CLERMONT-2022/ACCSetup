@@ -26,22 +26,13 @@ public class SessionTests {
     private CarService carService;
 
     @Autowired
-    private ConditionService conditionService;
-
-    @Autowired
     private UserService userService;
-
-    @Autowired
-    private SetupService setupService;
 
     @Autowired
     private SessionService sessionService;
 
     @Autowired
     private TrackService trackService;
-
-    @Autowired
-    private WeatherService weatherService;
 
     @BeforeEach
     void beforeEach() {
