@@ -10,6 +10,10 @@ import com.ipme.poec.ACCSetup.Model.User;
 
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 	
+	List<Review> findBySetup_SetupId(Long id);
+	
+	List<Review> findByUser_UserId(Long id);
+	
 	List<Review> findBySetup(Setup setup);
 	
 	List<Review> findByUser(User user);

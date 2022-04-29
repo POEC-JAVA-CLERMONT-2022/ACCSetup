@@ -36,6 +36,9 @@ public class ReviewServiceTest {
 
         for(int i = 0; i<10; i++) {
             Review review = easyRandom.nextObject(Review.class);
+            review.setSetup(null);
+            review.setUser(null);
+           
             this.reviewRepository.save(review);
         }
     }
@@ -59,5 +62,7 @@ public class ReviewServiceTest {
         assertThat(created.getComment()).isEqualTo(comment);
 
 	}
+	
+	
 
 }

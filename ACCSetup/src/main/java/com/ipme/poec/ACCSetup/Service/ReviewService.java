@@ -40,10 +40,10 @@ public class ReviewService {
 	public List<Review> findAllReview() {
 		return reviewRepository.findAll();
 	}
-	
+	//TODO
 //	@Transactional
-//	public List<Review> findByUser(User user) {
-//		return reviewRepository.findByUser(user);
+//	public List<Review> findByUser(Long userId) {
+//		return reviewRepository.findById(userId);
 //	}
 //	
 //	@Transactional

@@ -35,6 +35,10 @@ public class Review {
 		this.comment = reviewComment;
 	}
 	
+	public Review() {
+		super();
+	}
+
 	public Review(String reviewTitle, String reviewComment, User user, Setup setup) {
 		this(reviewTitle, reviewComment);
 		this.user = user;
