@@ -5,7 +5,6 @@ import com.ipme.poec.ACCSetup.Model.Session;
 import com.ipme.poec.ACCSetup.Model.Track;
 import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Service.SessionService;
-import com.ipme.poec.ACCSetup.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,10 +18,6 @@ public class SessionController {
     @Autowired
     private SessionService sessionService;
 
-    @Autowired
-    private UserService userService;
-
-
     @GetMapping
     public List<Session> getSessions() {
         return sessionService.findAllSessions();
@@ -32,7 +27,6 @@ public class SessionController {
     public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
 
         sessionService.createSession(sessionName, sessionDate, track, car, user);
-
     }
 
     @PutMapping("/edit")

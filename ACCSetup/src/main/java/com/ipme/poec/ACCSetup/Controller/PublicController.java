@@ -74,7 +74,7 @@ public class PublicController {
 	public ModelAndView reviewList( ) {
 		ModelAndView mAV = new ModelAndView("reviews/review-list");
 		
-		mAV.addObject("reviewsList", reviewService.findAllReview());
+		mAV.addObject("reviews", reviewService.findAllReview());
 
         return mAV;
 	}
