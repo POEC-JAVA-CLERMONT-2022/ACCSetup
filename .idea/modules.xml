@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ACCSetup.iml" filepath="$PROJECT_DIR$/../ACCSetup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ACCSetup.iml" filepath="$PROJECT_DIR$/ACCSetup.iml" />
     </modules>
   </component>
 </project>
