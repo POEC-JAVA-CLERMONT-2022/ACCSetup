@@ -4,73 +4,345 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9516880c-327e-4939-9aba-6c47bb5347c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ACCSetup.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c6650300-d712-40d7-bcc1-99487ff38fb1" name="Changes" comment="Mise à jour architecture projet">
+      <change beforePath="$PROJECT_DIR$/../ACCSetup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ACCSetup.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCSetup/target/classes/META-INF/maven/ipme.poec/ACCSetup/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSetup/target/classes/META-INF/maven/ipme.poec/ACCSetup/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipme/poec/ACCSetup/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/AccSetupApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/AccSetupApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ipme/poec/ACCSetup/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipme/poec/ACCSetup/Service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ipme/poec/ACCSetup/AccSetupApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ipme/poec/ACCSetup/AccSetupApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="dev_flo" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
+        <option name="usePluginRegistry" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="269Y3qRu6tdQI3FlShOr7MzhzVW" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="26VJ2dj93OhzCs29xsephzyEj0A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
-  <component name="RunManager">
-    <configuration name="AccSetupApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC3\Desktop\ACCSetup\ACCSetup\src\test\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserTests">
+    <configuration name="UserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ACCSetup" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ipme.poec.ACCSetup.AccSetupApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
+      <option name="MAIN_CLASS_NAME" value="com.ipme.poec.ACCSetup.UserTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTests.convertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ACCSetup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
+      <option name="MAIN_CLASS_NAME" value="com.ipme.poec.ACCSetup.UserTests" />
+      <option name="METHOD_NAME" value="convertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ipme.poec.ACCSetup in ACCSetup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ACCSetup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipme.poec.ACCSetup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ipme.poec.ACCSetup" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ACCSetup [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="ACCSetup [validate]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="validate" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ACCSetup" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ipme.poec.ACCSetup.AccSetupApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.com.ipme.poec.ACCSetup in ACCSetup" />
+      <item itemvalue="JUnit.UserTests.convertTest" />
+      <item itemvalue="JUnit.UserTests" />
+      <item itemvalue="Maven.ACCSetup [validate]" />
+      <item itemvalue="Maven.ACCSetup [package]" />
+      <item itemvalue="Spring Boot.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTests" />
+        <item itemvalue="JUnit.UserTests.convertTest" />
+        <item itemvalue="Maven.ACCSetup [package]" />
+        <item itemvalue="Maven.ACCSetup [validate]" />
+        <item itemvalue="JUnit.com.ipme.poec.ACCSetup in ACCSetup" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9516880c-327e-4939-9aba-6c47bb5347c4" name="Changes" comment="" />
-      <created>1646837079688</created>
+      <changelist id="c6650300-d712-40d7-bcc1-99487ff38fb1" name="Changes" comment="" />
+      <created>1647502628687</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646837079688</updated>
-      <workItem from="1646837081584" duration="1207000" />
-      <workItem from="1646838349298" duration="599000" />
-      <workItem from="1647935342139" duration="40000" />
-      <workItem from="1648216324807" duration="357000" />
-      <workItem from="1648216689767" duration="96000" />
+      <updated>1647502628687</updated>
+      <workItem from="1647502630353" duration="262000" />
+      <workItem from="1647506894271" duration="760000" />
+      <workItem from="1647507732739" duration="6986000" />
+      <workItem from="1647522528159" duration="5928000" />
+      <workItem from="1647589163653" duration="2547000" />
+      <workItem from="1647849851584" duration="678000" />
+      <workItem from="1647935406999" duration="13201000" />
+      <workItem from="1648047109714" duration="1372000" />
+      <workItem from="1648116676911" duration="4442000" />
+      <workItem from="1648127537415" duration="9115000" />
+      <workItem from="1648194403047" duration="6845000" />
+      <workItem from="1648451061578" duration="6000" />
+      <workItem from="1648536553887" duration="14889000" />
+      <workItem from="1648624137496" duration="19605000" />
+      <workItem from="1648713877686" duration="16324000" />
+      <workItem from="1648797250040" duration="19448000" />
+      <workItem from="1649659089230" duration="177000" />
+      <workItem from="1649659341910" duration="673000" />
+      <workItem from="1648797250040" duration="14567000" />
+      <workItem from="1649248547144" duration="475000" />
+      <workItem from="1649249055573" duration="3490000" />
+      <workItem from="1650352163954" duration="18371000" />
+      <workItem from="1650438580931" duration="15840000" />
+      <workItem from="1650868597730" duration="30648000" />
+      <workItem from="1651041121934" duration="1680000" />
+      <workItem from="1651140331022" duration="2461000" />
+      <workItem from="1651216021731" duration="6880000" />
+      <workItem from="1651473463287" duration="732000" />
     </task>
+    <task id="LOCAL-00001" summary="Mise à jour architecture projet">
+      <created>1647510141197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647510141197</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Mise à jour architecture projet">
+      <created>1647510365607</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647510365607</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="ad796a4a-20ad-4ff8-9bea-3f3279d21d3d">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/flo-A/Desktop/ACCSetup/ACCSetup/src" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="ad796a4a-20ad-4ff8-9bea-3f3279d21d3d" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Mise à jour architecture projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise à jour architecture projet" />
   </component>
 </project>
