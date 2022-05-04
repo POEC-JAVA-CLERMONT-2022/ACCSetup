@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Setup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ACCSetup</a> &gt; <a href="index.source.html" class="el_package">com.ipme.poec.ACCSetup.Model</a> &gt; <span class="el_source">Setup.java</span></div><h1>Setup.java</h1><pre class="source lang-java linenums">package com.ipme.poec.ACCSetup.Model;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = &quot;setup&quot;)
+public class Setup {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = &quot;setupID&quot;, length = 11)
+    private int setupId;
+
+    @Column(name = &quot;setupname&quot;)
+    private String setupName;
+    @Column(name = &quot;setupflpsi&quot;)
+    private float setupFLPsi;
+    @Column(name = &quot;setupfrpsi&quot;)
+    private float setupFRPsi;
+    @Column(name = &quot;setuplpsi&quot;)
+    private float setupRLPsi;
+    @Column(name = &quot;setuprrpsi&quot;)
+    private float setupRRPsi;
+    @Column(name = &quot;setupfltoe&quot;)
+    private float setupFLToe;
+    @Column(name = &quot;setupfrtoe&quot;)
+    private float setupFRToe;
+    @Column(name = &quot;setuprltoe&quot;)
+    private float setupRLToe;
+    @Column(name = &quot;setuprrtoe&quot;)
+    private float setupRRToe;
+    @Column(name = &quot;setupflcamber&quot;)
+    private float setupFLCamber;
+    @Column(name = &quot;setupfrcamber&quot;)
+    private float setupFRCamber;
+    @Column(name = &quot;setuprlcamber&quot;)
+    private float setupRLCamber;
+    @Column(name = &quot;setuprrcamber&quot;)
+    private float setupRRCamber;
+    @Column(name = &quot;setupflcaster&quot;)
+    private float setupFLCaster;
+    @Column(name = &quot;setupfrcaster&quot;)
+    private float setupFRCaster;
+    @Column(name = &quot;setup_desc&quot;)
+    private String setupDesc;
+
+    @ManyToMany
+    private List&lt;Weather&gt; weathers;
+
+    @ManyToMany
+    private List&lt;Condition&gt; conditions;
+
+    @ManyToOne
+    @JoinColumn(name = &quot;sessionid&quot;, nullable = false)
+    private Session session;
+
+<span class="nc" id="L58">    public Setup(int setupId, String setupName, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc, List&lt;Weather&gt; weathers, List&lt;Condition&gt; conditions, Session session) {</span>
+<span class="nc" id="L59">        this.setupId = setupId;</span>
+<span class="nc" id="L60">        this.setupName = setupName;</span>
+<span class="nc" id="L61">        this.setupFLPsi = setupFLPsi;</span>
+<span class="nc" id="L62">        this.setupFRPsi = setupFRPsi;</span>
+<span class="nc" id="L63">        this.setupRLPsi = setupRLPsi;</span>
+<span class="nc" id="L64">        this.setupRRPsi = setupRRPsi;</span>
+<span class="nc" id="L65">        this.setupFLToe = setupFLToe;</span>
+<span class="nc" id="L66">        this.setupFRToe = setupFRToe;</span>
+<span class="nc" id="L67">        this.setupRLToe = setupRLToe;</span>
+<span class="nc" id="L68">        this.setupRRToe = setupRRToe;</span>
+<span class="nc" id="L69">        this.setupFLCamber = setupFLCamber;</span>
+<span class="nc" id="L70">        this.setupFRCamber = setupFRCamber;</span>
+<span class="nc" id="L71">        this.setupRLCamber = setupRLCamber;</span>
+<span class="nc" id="L72">        this.setupRRCamber = setupRRCamber;</span>
+<span class="nc" id="L73">        this.setupFLCaster = setupFLCaster;</span>
+<span class="nc" id="L74">        this.setupFRCaster = setupFRCaster;</span>
+<span class="nc" id="L75">        this.setupDesc = setupDesc;</span>
+<span class="nc" id="L76">        this.weathers = weathers;</span>
+<span class="nc" id="L77">        this.conditions = conditions;</span>
+<span class="nc" id="L78">        this.session = session;</span>
+<span class="nc" id="L79">    }</span>
+
+<span class="fc" id="L81">    public Setup() {</span>
+
+<span class="fc" id="L83">    }</span>
+
+    public int getSetupId() {
+<span class="fc" id="L86">        return setupId;</span>
+    }
+
+    public void setSetupId(int setupId) {
+<span class="nc" id="L90">        this.setupId = setupId;</span>
+<span class="nc" id="L91">    }</span>
+
+    public String getSetupName() {
+<span class="nc" id="L94">        return setupName;</span>
+    }
+
+    public void setSetupName(String setupName) {
+<span class="fc" id="L98">        this.setupName = setupName;</span>
+<span class="fc" id="L99">    }</span>
+
+    public float getSetupFLPsi() {
+<span class="nc" id="L102">        return setupFLPsi;</span>
+    }
+
+    public void setSetupFLPsi(float setupFLPsi) {
+<span class="fc" id="L106">        this.setupFLPsi = setupFLPsi;</span>
+<span class="fc" id="L107">    }</span>
+
+    public float getSetupFRPsi() {
+<span class="nc" id="L110">        return setupFRPsi;</span>
+    }
+
+    public void setSetupFRPsi(float setupFRPsi) {
+<span class="fc" id="L114">        this.setupFRPsi = setupFRPsi;</span>
+<span class="fc" id="L115">    }</span>
+
+    public float getSetupRLPsi() {
+<span class="nc" id="L118">        return setupRLPsi;</span>
+    }
+
+    public void setSetupRLPsi(float setupRLPsi) {
+<span class="fc" id="L122">        this.setupRLPsi = setupRLPsi;</span>
+<span class="fc" id="L123">    }</span>
+
+    public float getSetupRRPsi() {
+<span class="nc" id="L126">        return setupRRPsi;</span>
+    }
+
+    public void setSetupRRPsi(float setupRRPsi) {
+<span class="fc" id="L130">        this.setupRRPsi = setupRRPsi;</span>
+<span class="fc" id="L131">    }</span>
+
+    public float getSetupFLToe() {
+<span class="nc" id="L134">        return setupFLToe;</span>
+    }
+
+    public void setSetupFLToe(float setupFLToe) {
+<span class="fc" id="L138">        this.setupFLToe = setupFLToe;</span>
+<span class="fc" id="L139">    }</span>
+
+    public float getSetupFRToe() {
+<span class="nc" id="L142">        return setupFRToe;</span>
+    }
+
+    public void setSetupFRToe(float setupFRToe) {
+<span class="fc" id="L146">        this.setupFRToe = setupFRToe;</span>
+<span class="fc" id="L147">    }</span>
+
+    public float getSetupRLToe() {
+<span class="nc" id="L150">        return setupRLToe;</span>
+    }
+
+    public void setSetupRLToe(float setupRLToe) {
+<span class="fc" id="L154">        this.setupRLToe = setupRLToe;</span>
+<span class="fc" id="L155">    }</span>
+
+    public float getSetupRRToe() {
+<span class="nc" id="L158">        return setupRRToe;</span>
+    }
+
+    public void setSetupRRToe(float setupRRToe) {
+<span class="fc" id="L162">        this.setupRRToe = setupRRToe;</span>
+<span class="fc" id="L163">    }</span>
+
+    public float getSetupFLCamber() {
+<span class="fc" id="L166">        return setupFLCamber;</span>
+    }
+
+    public void setSetupFLCamber(float setupFLCamber) {
+<span class="fc" id="L170">        this.setupFLCamber = setupFLCamber;</span>
+<span class="fc" id="L171">    }</span>
+
+    public float getSetupFRCamber() {
+<span class="nc" id="L174">        return setupFRCamber;</span>
+    }
+
+    public void setSetupFRCamber(float setupFRCamber) {
+<span class="fc" id="L178">        this.setupFRCamber = setupFRCamber;</span>
+<span class="fc" id="L179">    }</span>
+
+    public float getSetupRLCamber() {
+<span class="nc" id="L182">        return setupRLCamber;</span>
+    }
+
+    public void setSetupRLCamber(float setupRLCamber) {
+<span class="fc" id="L186">        this.setupRLCamber = setupRLCamber;</span>
+<span class="fc" id="L187">    }</span>
+
+    public float getSetupRRCamber() {
+<span class="nc" id="L190">        return setupRRCamber;</span>
+    }
+
+    public void setSetupRRCamber(float setupRRCamber) {
+<span class="fc" id="L194">        this.setupRRCamber = setupRRCamber;</span>
+<span class="fc" id="L195">    }</span>
+
+    public float getSetupFLCaster() {
+<span class="nc" id="L198">        return setupFLCaster;</span>
+    }
+
+    public void setSetupFLCaster(float setupFLCaster) {
+<span class="fc" id="L202">        this.setupFLCaster = setupFLCaster;</span>
+<span class="fc" id="L203">    }</span>
+
+    public float getSetupFRCaster() {
+<span class="nc" id="L206">        return setupFRCaster;</span>
+    }
+
+    public void setSetupFRCaster(float setupFRCaster) {
+<span class="fc" id="L210">        this.setupFRCaster = setupFRCaster;</span>
+<span class="fc" id="L211">    }</span>
+
+    public String getSetupDesc() {
+<span class="nc" id="L214">        return setupDesc;</span>
+    }
+
+    public void setSetupDesc(String setupDesc) {
+<span class="fc" id="L218">        this.setupDesc = setupDesc;</span>
+<span class="fc" id="L219">    }</span>
+
+
+    public List&lt;Weather&gt; getWeathers() {
+<span class="nc" id="L223">        return weathers;</span>
+    }
+
+    public void setWeathers(List&lt;Weather&gt; weathers) {
+<span class="fc" id="L227">        this.weathers = weathers;</span>
+<span class="fc" id="L228">    }</span>
+
+    public List&lt;Condition&gt; getConditions() {
+<span class="nc" id="L231">        return conditions;</span>
+    }
+
+    public void setConditions(List&lt;Condition&gt; conditions) {
+<span class="fc" id="L235">        this.conditions = conditions;</span>
+<span class="fc" id="L236">    }</span>
+
+    public Session getSession() {
+<span class="fc" id="L239">        return session;</span>
+    }
+
+    public void setSession(Session session) {
+<span class="fc" id="L243">        this.session = session;</span>
+<span class="fc" id="L244">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L248" title="All 2 branches missed.">        if (this == o) return true;</span>
+<span class="nc bnc" id="L249" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+
+<span class="nc" id="L251">        Setup setup = (Setup) o;</span>
+
+<span class="nc bnc" id="L253" title="All 2 branches missed.">        return setupId == setup.setupId;</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L258">        return setupId;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

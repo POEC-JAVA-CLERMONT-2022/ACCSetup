@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SetupDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ACCSetup</a> &gt; <a href="index.source.html" class="el_package">com.ipme.poec.ACCSetup.Service.dto</a> &gt; <span class="el_source">SetupDTO.java</span></div><h1>SetupDTO.java</h1><pre class="source lang-java linenums">package com.ipme.poec.ACCSetup.Service.dto;
+
+import com.ipme.poec.ACCSetup.Model.Condition;
+import com.ipme.poec.ACCSetup.Model.Weather;
+import lombok.Data;
+
+import java.util.List;
+
+<span class="nc bnc" id="L9" title="All 76 branches missed.">@Data</span>
+public class SetupDTO {
+
+    private int id;
+
+    private String name;
+
+    private float flPsi;
+
+    private float frPsi;
+
+    private float rlPsi;
+
+    private float rrPsi;
+
+    private float flToe;
+
+    private float frToe;
+
+    private float rlToe;
+
+    private float rrToe;
+
+    private float flCamber;
+
+    private float frCamber;
+
+    private float rlCamber;
+
+    private float rrCamber;
+
+    private float flCaster;
+
+    private float frCaster;
+
+    private String desc;
+
+    private List&lt;Weather&gt; weathers;
+
+    private List&lt;Condition&gt; conditions;
+
+    private SessionDTO session;
+
+<span class="nc" id="L52">    public SetupDTO(int id, String name, float flPsi, float frPsi, float rlPsi, float rrPsi, float flToe, float frToe, float rlToe, float rrToe, float flCamber, float frCamber, float rlCamber, float rrCamber, float flCaster, float frCaster, String desc, List&lt;Weather&gt; weathers, List&lt;Condition&gt; conditions, SessionDTO session) {</span>
+<span class="nc" id="L53">        this.id = id;</span>
+<span class="nc" id="L54">        this.name = name;</span>
+<span class="nc" id="L55">        this.flPsi = flPsi;</span>
+<span class="nc" id="L56">        this.frPsi = frPsi;</span>
+<span class="nc" id="L57">        this.rlPsi = rlPsi;</span>
+<span class="nc" id="L58">        this.rrPsi = rrPsi;</span>
+<span class="nc" id="L59">        this.flToe = flToe;</span>
+<span class="nc" id="L60">        this.frToe = frToe;</span>
+<span class="nc" id="L61">        this.rlToe = rlToe;</span>
+<span class="nc" id="L62">        this.rrToe = rrToe;</span>
+<span class="nc" id="L63">        this.flCamber = flCamber;</span>
+<span class="nc" id="L64">        this.frCamber = frCamber;</span>
+<span class="nc" id="L65">        this.rlCamber = rlCamber;</span>
+<span class="nc" id="L66">        this.rrCamber = rrCamber;</span>
+<span class="nc" id="L67">        this.flCaster = flCaster;</span>
+<span class="nc" id="L68">        this.frCaster = frCaster;</span>
+<span class="nc" id="L69">        this.desc = desc;</span>
+<span class="nc" id="L70">        this.weathers = weathers;</span>
+<span class="nc" id="L71">        this.conditions = conditions;</span>
+<span class="nc" id="L72">        this.session = session;</span>
+<span class="nc" id="L73">    }</span>
+
+    public int getId() {
+<span class="nc" id="L76">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L80">        this.id = id;</span>
+<span class="nc" id="L81">    }</span>
+
+    public String getName() {
+<span class="nc" id="L84">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc" id="L88">        this.name = name;</span>
+<span class="nc" id="L89">    }</span>
+
+    public float getFlPsi() {
+<span class="nc" id="L92">        return flPsi;</span>
+    }
+
+    public void setFlPsi(float flPsi) {
+<span class="nc" id="L96">        this.flPsi = flPsi;</span>
+<span class="nc" id="L97">    }</span>
+
+    public float getFrPsi() {
+<span class="nc" id="L100">        return frPsi;</span>
+    }
+
+    public void setFrPsi(float frPsi) {
+<span class="nc" id="L104">        this.frPsi = frPsi;</span>
+<span class="nc" id="L105">    }</span>
+
+    public float getRlPsi() {
+<span class="nc" id="L108">        return rlPsi;</span>
+    }
+
+    public void setRlPsi(float rlPsi) {
+<span class="nc" id="L112">        this.rlPsi = rlPsi;</span>
+<span class="nc" id="L113">    }</span>
+
+    public float getRrPsi() {
+<span class="nc" id="L116">        return rrPsi;</span>
+    }
+
+    public void setRrPsi(float rrPsi) {
+<span class="nc" id="L120">        this.rrPsi = rrPsi;</span>
+<span class="nc" id="L121">    }</span>
+
+    public float getFlToe() {
+<span class="nc" id="L124">        return flToe;</span>
+    }
+
+    public void setFlToe(float flToe) {
+<span class="nc" id="L128">        this.flToe = flToe;</span>
+<span class="nc" id="L129">    }</span>
+
+    public float getFrToe() {
+<span class="nc" id="L132">        return frToe;</span>
+    }
+
+    public void setFrToe(float frToe) {
+<span class="nc" id="L136">        this.frToe = frToe;</span>
+<span class="nc" id="L137">    }</span>
+
+    public float getRlToe() {
+<span class="nc" id="L140">        return rlToe;</span>
+    }
+
+    public void setRlToe(float rlToe) {
+<span class="nc" id="L144">        this.rlToe = rlToe;</span>
+<span class="nc" id="L145">    }</span>
+
+    public float getRrToe() {
+<span class="nc" id="L148">        return rrToe;</span>
+    }
+
+    public void setRrToe(float rrToe) {
+<span class="nc" id="L152">        this.rrToe = rrToe;</span>
+<span class="nc" id="L153">    }</span>
+
+    public float getFlCamber() {
+<span class="nc" id="L156">        return flCamber;</span>
+    }
+
+    public void setFlCamber(float flCamber) {
+<span class="nc" id="L160">        this.flCamber = flCamber;</span>
+<span class="nc" id="L161">    }</span>
+
+    public float getFrCamber() {
+<span class="nc" id="L164">        return frCamber;</span>
+    }
+
+    public void setFrCamber(float frCamber) {
+<span class="nc" id="L168">        this.frCamber = frCamber;</span>
+<span class="nc" id="L169">    }</span>
+
+    public float getRlCamber() {
+<span class="nc" id="L172">        return rlCamber;</span>
+    }
+
+    public void setRlCamber(float rlCamber) {
+<span class="nc" id="L176">        this.rlCamber = rlCamber;</span>
+<span class="nc" id="L177">    }</span>
+
+    public float getRrCamber() {
+<span class="nc" id="L180">        return rrCamber;</span>
+    }
+
+    public void setRrCamber(float rrCamber) {
+<span class="nc" id="L184">        this.rrCamber = rrCamber;</span>
+<span class="nc" id="L185">    }</span>
+
+    public float getFlCaster() {
+<span class="nc" id="L188">        return flCaster;</span>
+    }
+
+    public void setFlCaster(float flCaster) {
+<span class="nc" id="L192">        this.flCaster = flCaster;</span>
+<span class="nc" id="L193">    }</span>
+
+    public float getFrCaster() {
+<span class="nc" id="L196">        return frCaster;</span>
+    }
+
+    public void setFrCaster(float frCaster) {
+<span class="nc" id="L200">        this.frCaster = frCaster;</span>
+<span class="nc" id="L201">    }</span>
+
+    public String getDesc() {
+<span class="nc" id="L204">        return desc;</span>
+    }
+
+    public void setDesc(String desc) {
+<span class="nc" id="L208">        this.desc = desc;</span>
+<span class="nc" id="L209">    }</span>
+
+    public List&lt;Weather&gt; getWeathers() {
+<span class="nc" id="L212">        return weathers;</span>
+    }
+
+    public void setWeathers(List&lt;Weather&gt; weathers) {
+<span class="nc" id="L216">        this.weathers = weathers;</span>
+<span class="nc" id="L217">    }</span>
+
+    public List&lt;Condition&gt; getConditions() {
+<span class="nc" id="L220">        return conditions;</span>
+    }
+
+    public void setConditions(List&lt;Condition&gt; conditions) {
+<span class="nc" id="L224">        this.conditions = conditions;</span>
+<span class="nc" id="L225">    }</span>
+
+    public SessionDTO getSession() {
+<span class="nc" id="L228">        return session;</span>
+    }
+
+    public void setSession(SessionDTO session) {
+<span class="nc" id="L232">        this.session = session;</span>
+<span class="nc" id="L233">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SetupService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ACCSetup</a> &gt; <a href="index.source.html" class="el_package">com.ipme.poec.ACCSetup.Service</a> &gt; <span class="el_source">SetupService.java</span></div><h1>SetupService.java</h1><pre class="source lang-java linenums">package com.ipme.poec.ACCSetup.Service;
+
+import com.ipme.poec.ACCSetup.Model.*;
+import com.ipme.poec.ACCSetup.Repository.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@Transactional
+<span class="fc" id="L16">public class SetupService {</span>
+
+    @Autowired
+    private SetupRepository setupRepository;
+
+    @Autowired
+    private ConditionRepository conditionRepository;
+
+    @Autowired
+    private WeatherRepository weatherRepository;
+
+    @Autowired
+    private SessionRepository sessionRepository;
+
+    public List&lt;Setup&gt; findAll() {
+<span class="fc" id="L31">        return setupRepository.findAll();</span>
+    }
+
+    public Optional&lt;Setup&gt; findById(Integer id) {
+<span class="nc" id="L35">        return setupRepository.findById(id);</span>
+    }
+
+    public Setup getSetupById(Integer id) {
+<span class="nc" id="L39">        return setupRepository.getById(id);</span>
+    }
+
+    public Setup getSetupByName(String name) {
+<span class="fc" id="L43">        return setupRepository.getBySetupName(name);</span>
+    }
+
+    public List&lt;Condition&gt; findAllConditions() {
+<span class="nc" id="L47">        return conditionRepository.findAll();</span>
+    }
+
+    public Condition getConditionByName(String name) {
+<span class="nc" id="L51">        return conditionRepository.getConditionByName(name);</span>
+    }
+
+    public Condition saveCondition(Condition condition) {
+<span class="nc" id="L55">        return conditionRepository.saveAndFlush(condition);</span>
+    }
+
+    public List&lt;Weather&gt; findAllWeathers() {
+<span class="nc" id="L59">        return weatherRepository.findAll();</span>
+    }
+
+    public Weather saveWeather(Weather weather) {
+<span class="nc" id="L63">        return weatherRepository.saveAndFlush(weather);</span>
+    }
+
+    public Weather getWeatherById(Integer id) {
+<span class="nc" id="L67">        return weatherRepository.getById(id);</span>
+    }
+
+    public Weather getWeatherByName(String name) {
+<span class="nc" id="L71">        return weatherRepository.getByWeatherName(name);</span>
+    }
+
+    public List&lt;Weather&gt; findWeathersByIdsIn(List&lt;Integer&gt; ids) {
+<span class="nc" id="L75">        return weatherRepository.findByIdsIn(ids);</span>
+    } //méthode pour obtenir une liste de météos selon le choix de l'utilisateur (une ou plusieurs)
+
+    public List&lt;Condition&gt; findConditionsByIdsIn(List&lt;Integer&gt; ids) {
+<span class="nc" id="L79">        return conditionRepository.findByIdsIn(ids);</span>
+    } //méthode pour obtenir une liste de conditions selon le choix de l'utilisateur (une ou plusieurs)
+
+    public Condition getConditionById(Integer id) {
+<span class="nc" id="L83">        return conditionRepository.getById(id);</span>
+    }
+
+    public void createSetup(String name, List&lt;Integer&gt; weatherIds, List&lt;Integer&gt; conditionIds, Session session) {
+
+
+<span class="fc" id="L89">        List&lt;Weather&gt; weathers = new LinkedList&lt;&gt;(); //on initialise une liste de météos</span>
+<span class="fc" id="L90">        weathers = weatherRepository.findByIdsIn(weatherIds); //on appelle la méthode du service, faisant appel à la méthode du repository pour chercher des objets à partir d'une liste d'ids</span>
+
+<span class="fc" id="L92">        List&lt;Condition&gt; conditions = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L93">        conditions = conditionRepository.findByIdsIn(conditionIds);</span>
+
+<span class="fc" id="L95">        Setup setup = new Setup();</span>
+<span class="fc" id="L96">        setup.setSetupName(name);</span>
+<span class="fc" id="L97">        setup.setConditions(conditions);</span>
+<span class="fc" id="L98">        setup.setWeathers(weathers);</span>
+<span class="fc" id="L99">        setup.setSession(session);</span>
+
+<span class="fc" id="L101">        setupRepository.saveAndFlush(setup);</span>
+<span class="fc" id="L102">    } //méthode de création d'un user</span>
+
+    public void deleteSetup(Integer id) {
+<span class="fc" id="L105">        setupRepository.deleteById(id);</span>
+<span class="fc" id="L106">    } //méthode de suppression d'un user, selon son userId</span>
+
+    public void deleteAllSetups() {
+<span class="nc" id="L109">        setupRepository.deleteAll();</span>
+<span class="nc" id="L110">    }</span>
+
+    public void updateSetup(Setup setup, String nameToUpdate, float setupFLCamberToUpdate, float setupFRCamberToUpdate, float setupRLCamberToUpdate, float setupRRCamberToUpdate, float setupFLPsiToUpdate, float setupFRPsiToUpdate, float setupRLPsiToUpdate, float setupRRPsiToUpdate, float setupFLToeToUpdate, float setupFRToeToUpdate, float setupRLToeToUpdate, float setupRRToeToUpdate, float setupFLCasterToUpdate, float setupFRCasterToUpdate, String setupDescToUpdate, List&lt;Integer&gt; conditionsToUpdate, List&lt;Integer&gt; weathersToUpdate) {
+<span class="fc" id="L113">        setup.setSetupName(nameToUpdate);</span>
+<span class="fc" id="L114">        setup.setSetupFLCamber(setupFLCamberToUpdate);</span>
+<span class="fc" id="L115">        setup.setSetupFRCamber(setupFRCamberToUpdate);</span>
+<span class="fc" id="L116">        setup.setSetupRLCamber(setupRLCamberToUpdate);</span>
+<span class="fc" id="L117">        setup.setSetupRRCamber(setupRRCamberToUpdate);</span>
+<span class="fc" id="L118">        setup.setSetupFLPsi(setupFLPsiToUpdate);</span>
+<span class="fc" id="L119">        setup.setSetupFRPsi(setupFRPsiToUpdate);</span>
+<span class="fc" id="L120">        setup.setSetupRLPsi(setupRLPsiToUpdate);</span>
+<span class="fc" id="L121">        setup.setSetupRRPsi(setupRRPsiToUpdate);</span>
+<span class="fc" id="L122">        setup.setSetupFLToe(setupFLToeToUpdate);</span>
+<span class="fc" id="L123">        setup.setSetupFRToe(setupFRToeToUpdate);</span>
+<span class="fc" id="L124">        setup.setSetupRLToe(setupRLToeToUpdate);</span>
+<span class="fc" id="L125">        setup.setSetupRRToe(setupRRToeToUpdate);</span>
+<span class="fc" id="L126">        setup.setSetupFLCaster(setupFLCasterToUpdate);</span>
+<span class="fc" id="L127">        setup.setSetupFRCaster(setupFRCasterToUpdate);</span>
+<span class="fc" id="L128">        setup.setSetupDesc(setupDescToUpdate);</span>
+
+<span class="fc" id="L130">        List&lt;Weather&gt; weathers = new LinkedList&lt;&gt;(); //on initialise une liste de météos</span>
+<span class="fc" id="L131">        weathers = weatherRepository.findByIdsIn(weathersToUpdate); //on appelle la méthode du service, faisant appel à la méthode du repository pour chercher des objets à partir d'une liste d'ids</span>
+
+<span class="fc" id="L133">        List&lt;Condition&gt; conditions = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L134">        conditions = conditionRepository.findByIdsIn(conditionsToUpdate);</span>
+
+<span class="fc" id="L136">        setup.setConditions(conditions);</span>
+<span class="fc" id="L137">        setup.setWeathers(weathers);</span>
+<span class="fc" id="L138">        setupRepository.save(setup);</span>
+<span class="fc" id="L139">    }</span>
+
+    public void updateSetupByName(String setupName, String nameToUpdate, float setupFLCamberToUpdate, float setupFRCamberToUpdate, float setupRLCamberToUpdate, float setupRRCamberToUpdate, float setupFLPsiToUpdate, float setupFRPsiToUpdate, float setupRLPsiToUpdate, float setupRRPsiToUpdate, float setupFLToeToUpdate, float setupFRToeToUpdate, float setupRLToeToUpdate, float setupRRToeToUpdate, float setupFLCasterToUpdate, float setupFRCasterToUpdate, String setupDescToUpdate, List&lt;Integer&gt; conditionsToUpdate, List&lt;Integer&gt; weathersToUpdate) {
+<span class="nc" id="L142">        Setup setup = setupRepository.getBySetupName(setupName);</span>
+<span class="nc" id="L143">        setup.setSetupName(nameToUpdate);</span>
+<span class="nc" id="L144">        setup.setSetupFLCamber(setupFLCamberToUpdate);</span>
+<span class="nc" id="L145">        setup.setSetupFRCamber(setupFRCamberToUpdate);</span>
+<span class="nc" id="L146">        setup.setSetupRLCamber(setupRLCamberToUpdate);</span>
+<span class="nc" id="L147">        setup.setSetupRRCamber(setupRRCamberToUpdate);</span>
+<span class="nc" id="L148">        setup.setSetupFLPsi(setupFLPsiToUpdate);</span>
+<span class="nc" id="L149">        setup.setSetupFRPsi(setupFRPsiToUpdate);</span>
+<span class="nc" id="L150">        setup.setSetupRLPsi(setupRLPsiToUpdate);</span>
+<span class="nc" id="L151">        setup.setSetupRRPsi(setupRRPsiToUpdate);</span>
+<span class="nc" id="L152">        setup.setSetupFLToe(setupFLToeToUpdate);</span>
+<span class="nc" id="L153">        setup.setSetupFRToe(setupFRToeToUpdate);</span>
+<span class="nc" id="L154">        setup.setSetupRLToe(setupRLToeToUpdate);</span>
+<span class="nc" id="L155">        setup.setSetupRRToe(setupRRToeToUpdate);</span>
+<span class="nc" id="L156">        setup.setSetupFLCaster(setupFLCasterToUpdate);</span>
+<span class="nc" id="L157">        setup.setSetupFRCaster(setupFRCasterToUpdate);</span>
+<span class="nc" id="L158">        setup.setSetupDesc(setupDescToUpdate);</span>
+
+<span class="nc" id="L160">        List&lt;Weather&gt; weathers = new LinkedList&lt;&gt;(); //on initialise une liste de météos</span>
+<span class="nc" id="L161">        weathers = weatherRepository.findByIdsIn(weathersToUpdate); //on appelle la méthode du service, faisant appel à la méthode du repository pour chercher des objets à partir d'une liste d'ids</span>
+
+<span class="nc" id="L163">        List&lt;Condition&gt; conditions = new LinkedList&lt;&gt;();</span>
+<span class="nc" id="L164">        conditions = conditionRepository.findByIdsIn(conditionsToUpdate);</span>
+
+<span class="nc" id="L166">        setup.setConditions(conditions);</span>
+<span class="nc" id="L167">        setup.setWeathers(weathers);</span>
+<span class="nc" id="L168">        setupRepository.save(setup);</span>
+<span class="nc" id="L169">    }</span>
+
+
+    // attributs
+    //private int setupID;
+
+
+    // m�thode de nouveau setup, ajout setup vierge ou setup clone � modifier
+
+    // m�thode �dition du setup , modifier, enregistrer, enregistrer-sous
+
+    // m�thode d'ajout de commentaire
+
+    //
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
