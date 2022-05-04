@@ -1,0 +1,21 @@
+
+Ecom.ipme.poec.ACCSetup.Service.SetupService#findAll()Ljava/util/List;f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java ("1*ü
+1f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java (ð
+í
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java (7
+%01com.ipme.poec.ACCSetup.Repository.SetupRepository"__id*D*B-
++com.ipme.poec.ACCSetup.Service.SetupService"
+setupRepository˜•
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java ((
+%1java.util.List"Oorg.springframework.data.jpa.repository.JpaRepository#findAll()Ljava/util/List;*9
+7
+%01com.ipme.poec.ACCSetup.Repository.SetupRepository2	findAll()"€
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java ()
+
+%1java.util.ListB/-
++com.ipme.poec.ACCSetup.Service.SetupService

@@ -1,0 +1,105 @@
+
+<com.ipme.poec.ACCSetup.Model.Car#equals(Ljava/lang/Object;)Z[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java5 5("startingBlock*Ò
+2[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java=/ =(6±
+®
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java=> =(E
+%3java.lang.String"__id*1*/"
+ com.ipme.poec.ACCSetup.Model.Car"	
+carName¸
+µ
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java=G =(T
+%4java.lang.String"__id*8*6
+)
+other com.ipme.poec.ACCSetup.Model.Car"	
+carNameû
+ø
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java=/ =(U
+%5boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%3java.lang.String*
+
+%4java.lang.String*
+1*ñ
+3[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java< <(¬
+©
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java< <()
+other com.ipme.poec.ACCSetup.Model.Car"__id*
+
+objjava.lang.Object×
+Ô
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java=	 =(+
+%2boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+""*
+""*
+2
+1*±
+startingBlock[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java5 5("¥
+¢
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java4 4(
+
+%6"
+__annotate*
+java.lang.Override*
+
+objjava.lang.Object
+Œ
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java5 5(!
+objjava.lang.Object"__annotation*
+
+%6*	
+5
+6
+8*Ç
+4[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java;
+ ;("e
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java; ;(
+""*‘
+5[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java: :(×Ô
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java: :(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*$"
+ com.ipme.poec.ACCSetup.Model.Car2
+getClass()ÌÉ
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java: :("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+objjava.lang.Object2
+getClass()*
+3
+4*Ç
+6[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java9
+ 9("e
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java9 9(
+""*Ç
+8[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java7
+ 7("e
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java7 7(
+""*Ç
+1[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java= =(V"e
+[
+QC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Car.java= =(V
+"":
+objjava.lang.ObjectB$"
+ com.ipme.poec.ACCSetup.Model.Car

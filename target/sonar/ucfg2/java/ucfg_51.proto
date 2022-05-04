@@ -1,0 +1,24 @@
+
+kcom.ipme.poec.ACCSetup.Service.CarService#getCarById(Ljava/lang/Integer;)Lcom/ipme/poec/ACCSetup/Model/Car;d
+ZC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/CarService.java ("1*—
+1d
+ZC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/CarService.java (Ë
+Â
+d
+ZC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/CarService.java (5
+%0/com.ipme.poec.ACCSetup.Repository.CarRepository"__id*@*>+
+)com.ipme.poec.ACCSetup.Service.CarService"
+carRepositoryÁ‰
+d
+ZC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/CarService.java ((&
+%1 com.ipme.poec.ACCSetup.Model.Car"corg.springframework.data.jpa.repository.JpaRepository#getById(Ljava/lang/Object;)Ljava/lang/Object;*7
+5
+%0/com.ipme.poec.ACCSetup.Repository.CarRepository*
+
+idjava.lang.Integer2getById(Ljava/lang/Object;)"ê
+d
+ZC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/CarService.java ()(
+&
+%1 com.ipme.poec.ACCSetup.Model.Car:
+idjava.lang.IntegerB-+
+)com.ipme.poec.ACCSetup.Service.CarService

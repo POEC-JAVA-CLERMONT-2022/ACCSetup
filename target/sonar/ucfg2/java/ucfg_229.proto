@@ -1,0 +1,60 @@
+
+=com.ipme.poec.ACCSetup.Model.User#equals(Ljava/lang/Object;)Z\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaV V("startingBlock*É
+2\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaX< X(A"f
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaX5 X(B
+""*“
+3\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaX X(!ÙÖ
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaX X(#
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*%#
+!com.ipme.poec.ACCSetup.Model.User2
+getClass()ËÈ
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaX' X(3
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+ojava.lang.Object2
+getClass()*
+2
+1*°
+startingBlock\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaV V(#¤
+¡
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaU U(
+%2"
+__annotate*
+java.lang.Override*
+
+ojava.lang.ObjectŽ
+‹
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaV! V("
+ojava.lang.Object"__annotation*
+
+%2*	
+2
+3
+5*É
+5\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaW W(""f
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaW W(#
+""*÷
+1\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaZ Z(«
+¨
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaZ Z()
+user!com.ipme.poec.ACCSetup.Model.User"__id*
+
+ojava.lang.Object"f
+\
+RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.java\ \(%
+"":
+ojava.lang.ObjectB%#
+!com.ipme.poec.ACCSetup.Model.User

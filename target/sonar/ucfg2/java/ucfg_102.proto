@@ -1,0 +1,24 @@
+
+qcom.ipme.poec.ACCSetup.Service.SetupService#getSetupById(Ljava/lang/Integer;)Lcom/ipme/poec/ACCSetup/Model/Setup;f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java& &("1*å
+1f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java' '(ð
+í
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java' '(7
+%01com.ipme.poec.ACCSetup.Repository.SetupRepository"__id*D*B-
++com.ipme.poec.ACCSetup.Service.SetupService"
+setupRepositoryíê
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java' '(*(
+%1"com.ipme.poec.ACCSetup.Model.Setup"corg.springframework.data.jpa.repository.JpaRepository#getById(Ljava/lang/Object;)Ljava/lang/Object;*9
+7
+%01com.ipme.poec.ACCSetup.Repository.SetupRepository*
+
+idjava.lang.Integer2getById(Ljava/lang/Object;)"”
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SetupService.java' '(+*
+(
+%1"com.ipme.poec.ACCSetup.Model.Setup:
+idjava.lang.IntegerB/-
++com.ipme.poec.ACCSetup.Service.SetupService

@@ -1,0 +1,7 @@
+organization=poec-java-clermont-2022
+projectKey=ipme.poec:ACCSetup
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.28809
+dashboardUrl=https://sonarcloud.io/dashboard?id=ipme.poec%3AACCSetup
+ceTaskId=AYCOD-hyKKUYTop8X_TM
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYCOD-hyKKUYTop8X_TM

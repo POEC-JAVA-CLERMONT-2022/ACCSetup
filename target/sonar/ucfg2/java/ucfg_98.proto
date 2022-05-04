@@ -1,0 +1,60 @@
+
+@com.ipme.poec.ACCSetup.Model.Session#equals(Ljava/lang/Object;)Z_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javaq q("startingBlock*Ï
+2_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javas< s(A"i
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javas5 s(B
+""*Ÿ
+3_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javas s(!ßÜ
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javas s(#
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*(&
+$com.ipme.poec.ACCSetup.Model.Session2
+getClass()ÎË
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javas' s(3
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+ojava.lang.Object2
+getClass()*
+2
+1*¹
+startingBlock_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javaq q(#§
+¤
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javap p(
+%2"
+__annotate*
+java.lang.Override*
+
+ojava.lang.Object‘
+Ž
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javaq! q("
+ojava.lang.Object"__annotation*
+
+%2*	
+2
+3
+5*Ï
+5_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javar r(""i
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javar r(#
+""*†
+1_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javau$ u(%´
+±
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javau u(&/
+session$com.ipme.poec.ACCSetup.Model.Session"__id*
+
+ojava.lang.Object"i
+_
+UC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Session.javaw w(.
+"":
+ojava.lang.ObjectB(&
+$com.ipme.poec.ACCSetup.Model.Session
