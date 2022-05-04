@@ -1,18 +1,11 @@
 package com.ipme.poec.ACCSetup;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-import com.ipme.poec.ACCSetup.Model.User;
-import com.ipme.poec.ACCSetup.Repository.SessionRepository;
-import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import com.ipme.poec.ACCSetup.Service.*;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.event.EventListener;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -34,9 +27,6 @@ public class AccSetupApplication {
 
     @Autowired
     private SetupService setupService;
-
-    @Autowired
-    private DisplayService displayService;
 
     @Autowired
     private UserService userService;

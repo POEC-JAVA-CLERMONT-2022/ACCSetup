@@ -1,17 +1,17 @@
 
-Ocom.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO#getWeathers()Ljava/util/List;l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java# #($"1*œ
+pcom.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO#getSessionDTO()Lcom/ipme/poec/ACCSetup/Service/dto/SessionDTO;l
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java3 3(#"1*è
 1l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java$ $(“
-œ
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java4 4(Û
+
 l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java$ $(
-%0java.util.List"__id*C*A3
-1com.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO"
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java4 4(3
+%0-com.ipme.poec.ACCSetup.Service.dto.SessionDTO"__id*E*C3
+1com.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO"
 
-weathers"Ü
+sessionDTO"•
 l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java$ $(
-
-%0java.util.ListB53
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java4 4(5
+3
+%0-com.ipme.poec.ACCSetup.Service.dto.SessionDTOB53
 1com.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO

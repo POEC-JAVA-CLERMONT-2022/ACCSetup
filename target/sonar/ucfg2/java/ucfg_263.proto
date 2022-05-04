@@ -1,9 +1,17 @@
 
-:com.ipme.poec.ACCSetup.Service.dto.SetupDTO#getFrCaster()Fh
-\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÃ Ã("1*á
+Icom.ipme.poec.ACCSetup.Service.dto.SetupDTO#getWeathers()Ljava/util/List;h
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÓ Ó($"1*½
 1h
-\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÄ Ä("r
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÔ Ô(È
+Å
 h
-\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÄ Ä(
-""B/-
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÔ Ô(
+%0java.util.List"__id*=*;-
++com.ipme.poec.ACCSetup.Service.dto.SetupDTO"
+
+weathers"‚
+h
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaÔ Ô(
+
+%0java.util.ListB/-
 +com.ipme.poec.ACCSetup.Service.dto.SetupDTO

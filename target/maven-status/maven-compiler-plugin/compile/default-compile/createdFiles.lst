@@ -1,6 +1,5 @@
 com\ipme\poec\ACCSetup\Model\Setup.class
 com\ipme\poec\ACCSetup\Repository\TrackRepository.class
-com\ipme\poec\ACCSetup\Service\DisplayService.class
 com\ipme\poec\ACCSetup\Service\dto\UpdateUserNameDTO.class
 com\ipme\poec\ACCSetup\Repository\CarRepository.class
 com\ipme\poec\ACCSetup\Controller\UserController.class

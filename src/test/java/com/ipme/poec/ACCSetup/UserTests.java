@@ -19,7 +19,7 @@ import static org.junit.Assert.assertThrows;
 
 @SpringBootTest
 @Transactional
-public class UserTests {
+class UserTests {
 
     @Autowired
     private CarService carService;
@@ -111,9 +111,5 @@ public class UserTests {
         assertThat(users.contains(userToDelete)).isFalse();
     }
 
-    @Test
-    void convertTest(){
-        CreateUserDTO createUserDTO = new CreateUserDTO("bip","boup");
-        System.out.println(userService.convertCreationDtoToUser(createUserDTO));
-    }
+
 }

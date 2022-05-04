@@ -1,16 +1,17 @@
 
-Mcom.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO#getName()Ljava/lang/String;l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java ("1*Ï
+Qcom.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO#getConditions()Ljava/util/List;l
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java+ +(("1*Ñ
 1l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java (Ð
-Í
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java, ,(Ô
+Ñ
 l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java (
-%0java.lang.String"__id*?*=3
-1com.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO"
-name"ˆ
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java, ,(
+%0java.util.List"__id*E*C3
+1com.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO"
+
+conditions"†
 l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java (
-
-%0java.lang.StringB53
+bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/CreateSetupDTO.java, ,(
+
+%0java.util.ListB53
 1com.ipme.poec.ACCSetup.Service.dto.CreateSetupDTO

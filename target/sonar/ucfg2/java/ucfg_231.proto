@@ -1,87 +1,16 @@
 
->com.ipme.poec.ACCSetup.Model.User#toString()Ljava/lang/String;\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javae e("1*è
-1\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf f(›
-˜
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf g(
-%0java.lang.String"__concat*	
-User{*	
-userId=¥
-¢
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf g("
-%1java.lang.String"__concat*
+Gcom.ipme.poec.ACCSetup.Service.dto.SetupDTO#getName()Ljava/lang/String;f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaS S("1*·
+1f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaT T(Ä
+Á
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaT T(
+%0java.lang.String"__id*9*7-
++com.ipme.poec.ACCSetup.Service.dto.SetupDTO"
+name"‚
+f
+\C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/dto/SetupDTO.javaT T(
 
-%0java.lang.String*
-""¯
-¬
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf h(
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-, userName='´
-±
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javah! h()
-%3java.lang.String"__id*3*1#
-!com.ipme.poec.ACCSetup.Model.User"
-
-userName·
-´
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf h()
-%4java.lang.String"__concat*
-
-%2java.lang.String*
-
-%3java.lang.String¥
-¢
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf h(0
-%5java.lang.String"__concat*
-
-%4java.lang.String*
-\'³
-°
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf i("
-%6java.lang.String"__concat*
-
-%5java.lang.String*
-, userPassword='¸
-µ
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javai% i(1
-%7java.lang.String"__id*7*5#
-!com.ipme.poec.ACCSetup.Model.User"
-userPassword·
-´
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf i(1
-%8java.lang.String"__concat*
-
-%6java.lang.String*
-
-%7java.lang.String¥
-¢
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf i(8
-%9java.lang.String"__concat*
-
-%8java.lang.String*
-\'¥
-¢
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf j(
-%10java.lang.String"__concat*
-
-%9java.lang.String*
-}"y
-\
-RC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/User.javaf j(
-
-%10java.lang.StringB%#
-!com.ipme.poec.ACCSetup.Model.User
+%0java.lang.StringB/-
++com.ipme.poec.ACCSetup.Service.dto.SetupDTO

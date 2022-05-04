@@ -3,6 +3,7 @@ package com.ipme.poec.ACCSetup.Service.dto;
 import com.ipme.poec.ACCSetup.Model.Car;
 import com.ipme.poec.ACCSetup.Model.Track;
 import lombok.Data;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.TimeZone;
 @Data
 public class SessionDTO {
 
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
     private int id;
 

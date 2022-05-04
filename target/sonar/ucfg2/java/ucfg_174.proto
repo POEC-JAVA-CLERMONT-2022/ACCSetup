@@ -1,60 +1,21 @@
 
->com.ipme.poec.ACCSetup.Model.Track#equals(Ljava/lang/Object;)Z]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java/ /("startingBlock*Ë
-2]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java1< 1(A"g
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java15 1(B
-""*—
-3]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java1 1(!ÛØ
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java1 1(#
-%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*&$
-"com.ipme.poec.ACCSetup.Model.Track2
-getClass()ÌÉ
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java1' 1(3
-%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
-
-ojava.lang.Object2
-getClass()*
-2
-1*³
-startingBlock]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java/ /(#¥
-¢
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java. .(
-%2"
-__annotate*
-java.lang.Override*
-
-ojava.lang.Object
-Œ
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java/! /("
-ojava.lang.Object"__annotation*
-
-%2*	
-2
-3
-5*Ë
-5]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java0 0(""g
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java0 0(#
-""*ü
-1]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java3 3(®
-«
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java3 3( +
-track"com.ipme.poec.ACCSetup.Model.Track"__id*
-
-ojava.lang.Object"g
-]
-SC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Model/Track.java5 5((
-"":
-ojava.lang.ObjectB&$
-"com.ipme.poec.ACCSetup.Model.Track
+Mcom.ipme.poec.ACCSetup.Service.SessionService#findAllTracks()Ljava/util/List;h
+^C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java. .($"1*†
+1h
+^C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java/ /(ô
+ñ
+h
+^C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java/ /(7
+%01com.ipme.poec.ACCSetup.Repository.TrackRepository"__id*F*D/
+-com.ipme.poec.ACCSetup.Service.SessionService"
+trackRepositoryš—
+h
+^C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java/ /((
+%1java.util.List"Oorg.springframework.data.jpa.repository.JpaRepository#findAll()Ljava/util/List;*9
+7
+%01com.ipme.poec.ACCSetup.Repository.TrackRepository2	findAll()"‚
+h
+^C:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Service/SessionService.java/ /()
+
+%1java.util.ListB1/
+-com.ipme.poec.ACCSetup.Service.SessionService
