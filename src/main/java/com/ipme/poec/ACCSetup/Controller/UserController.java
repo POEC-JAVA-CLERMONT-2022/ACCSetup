@@ -16,14 +16,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("users")
+@RequestMapping()
 public class UserController {
 
 
     @Autowired
     private UserService userService;
 
-    @GetMapping()
+    @GetMapping("users")
     @ResponseBody()
     public List<UserDTO> getUsersDTO() {
         //...
@@ -37,25 +37,26 @@ public class UserController {
         return usersDTO;
     }
 
-    @PostMapping(value = "/add", produces = "application/json")
+    @PostMapping(value = "user", produces = "application/json")
     public void createUserFromDTO(String name, String password) {
         CreateUserDTO createUserDTO = new CreateUserDTO(name,password);
         User user = userService.convertCreationDtoToUser(createUserDTO);
         userService.saveUser(user);   //appel à la méthode de création du user dans le service, qui lui fait appel au repository
     }
 
-    @PutMapping(value = "/nameEdit", consumes = "application/json", produces = "application/json")
-    public void updateUserName(User user, String name) {
+    @PutMapping(value = "user/name/{userId}", consumes = "application/json", produces = "application/json")
+    public void updateUserName(@PathVariable int userId, User user, String name) {
         userService.updateUserName(user, name);
     }
 
-    @PutMapping(value = "/passwordEdit", consumes = "application/json", produces = "application/json")
-    public void updateUserPassword(User user, String password) {
+    @PutMapping(value = "user/password/{userId}", consumes = "application/json", produces = "application/json")
+    public void updateUserPassword(@PathVariable int userId, User user, String password) {
         userService.updateUserPassword(user, password);
     }
 
-    @DeleteMapping(value = "/delete", consumes = "application/json")
-    public void deleteUser(User user) {
+    @DeleteMapping(value = "user/{userId}", consumes = "application/json")
+    public void deleteUser(@PathVariable int userId, @RequestBody User user){
+        user = userService.getById(userId);
         userService.deleteUser(user.getUserId());
     }
 
