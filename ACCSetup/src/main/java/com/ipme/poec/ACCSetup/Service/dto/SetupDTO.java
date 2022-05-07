@@ -2,6 +2,8 @@ package com.ipme.poec.ACCSetup.Service.dto;
 
 import com.ipme.poec.ACCSetup.Model.Condition;
 import com.ipme.poec.ACCSetup.Model.Weather;
+import com.ipme.poec.ACCSetup.Service.dto.session.SessionDTO;
+
 import lombok.Data;
 
 import java.util.List;

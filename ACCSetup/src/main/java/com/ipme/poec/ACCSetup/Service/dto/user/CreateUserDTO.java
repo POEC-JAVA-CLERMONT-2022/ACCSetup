@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotBlank;
 
-import com.ipme.poec.ACCSetup.Service.dto.SessionDTO;
+import com.ipme.poec.ACCSetup.Service.dto.session.SessionDTO;
 
 public class CreateUserDTO {
 	

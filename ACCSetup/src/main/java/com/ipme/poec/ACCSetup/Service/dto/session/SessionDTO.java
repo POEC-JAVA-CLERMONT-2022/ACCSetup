@@ -1,4 +1,4 @@
-package com.ipme.poec.ACCSetup.Service.dto;
+package com.ipme.poec.ACCSetup.Service.dto.session;
 
 import com.ipme.poec.ACCSetup.Model.Car;
 import com.ipme.poec.ACCSetup.Model.Track;
@@ -26,6 +26,19 @@ public class SessionDTO {
     private Car car;
 
     private UserDTO user;
+    
+    public SessionDTO() {
+		super();
+	}
+
+	public SessionDTO(int id, String name, String date, Track track, Car car, UserDTO user) {
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        this.track = track;
+        this.car = car;
+        this.user = user;
+    }
 
     public Date getSubmissionDateConverted(String timezone) throws ParseException {
         dateFormat.setTimeZone(TimeZone.getTimeZone(timezone));
@@ -35,15 +48,6 @@ public class SessionDTO {
     public void setSubmissionDate(Date date, String timezone) {
         dateFormat.setTimeZone(TimeZone.getTimeZone(timezone));
         this.date = dateFormat.format(date);
-    }
-
-    public SessionDTO(int id, String name, String date, Track track, Car car, UserDTO user) {
-        this.id = id;
-        this.name = name;
-        this.date = date;
-        this.track = track;
-        this.car = car;
-        this.user = user;
     }
 
     public int getId() {

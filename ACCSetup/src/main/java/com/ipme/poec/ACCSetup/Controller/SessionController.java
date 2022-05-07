@@ -1,9 +1,6 @@
 package com.ipme.poec.ACCSetup.Controller;
 
-import com.ipme.poec.ACCSetup.Model.Car;
 import com.ipme.poec.ACCSetup.Model.Session;
-import com.ipme.poec.ACCSetup.Model.Track;
-import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Service.SessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,9 +21,9 @@ public class SessionController {
     }
 
     @PostMapping("/add")
-    public void createSession(String sessionName, LocalDate sessionDate, Track track, Car car, User user) {
+    public void createSession(String sessionName, LocalDate sessionDate, int trackId, int carId, int userId) {
 
-        sessionService.createSession(sessionName, sessionDate, track, car, user);
+        sessionService.createSession(sessionName, sessionDate, trackId, carId, userId);
     }
 
     @PutMapping("/edit")

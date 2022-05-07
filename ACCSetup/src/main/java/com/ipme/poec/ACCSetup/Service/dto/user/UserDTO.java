@@ -5,7 +5,7 @@ import lombok.Data;
 
 import java.util.List;
 
-import com.ipme.poec.ACCSetup.Service.dto.SessionDTO;
+import com.ipme.poec.ACCSetup.Service.dto.session.SessionDTO;
 
 @Data
 public class UserDTO {
