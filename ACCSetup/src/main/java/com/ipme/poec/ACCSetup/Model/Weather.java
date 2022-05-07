@@ -1,7 +1,6 @@
 package com.ipme.poec.ACCSetup.Model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "weather")

@@ -40,16 +40,16 @@ public class ReviewService {
 	public List<Review> findAllReview() {
 		return reviewRepository.findAll();
 	}
-	//TODO
-//	@Transactional
-//	public List<Review> findByUser(Long userId) {
-//		return reviewRepository.findById(userId);
-//	}
-//	
-//	@Transactional
-//	public List<Review> findBySetup(Setup setup) {
-//		return reviewRepository.findBySetup(setup);
-//	}
+	
+	@Transactional
+	public List<Review> findByUser(Long userId) {
+		return reviewRepository.findByUser_UserId(userId);
+	}
+	
+	@Transactional
+	public List<Review> findBySetup(Long setupId) {
+		return reviewRepository.findBySetup_SetupId(setupId);
+	}
 	
 	
 }
