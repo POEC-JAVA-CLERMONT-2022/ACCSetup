@@ -125,7 +125,7 @@ public class SessionService {
 
 	public void deleteSession(Integer id) {
 		sessionRepository.deleteById(id);
-	} // méthode de suppression d'un user, selon son userId
+	}
 
 	public void deleteAllSessions() {
 		sessionRepository.deleteAll();

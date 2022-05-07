@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.ipme.poec.ACCSetup.Model.Review;
 import com.ipme.poec.ACCSetup.Repository.ReviewRepository;
+import com.ipme.poec.ACCSetup.Repository.SetupRepository;
+import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import com.ipme.poec.ACCSetup.Service.converter.ReviewConverter;
 import com.ipme.poec.ACCSetup.Service.dto.review.ReviewDTO;
 
@@ -19,16 +21,31 @@ public class ReviewService {
 	private ReviewRepository reviewRepository;
 	
 	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+	private SetupRepository setupRepository;
+	
+	@Autowired
 	private ReviewConverter reviewConverter;
 	
 	@Transactional
-	public ReviewDTO createReview(String title, String comment) {
-		Review review = new Review(title, comment);
+	public ReviewDTO createReview(String title, String comment, int userId, int setupId) {
+		Review review = new Review(title, comment, userRepository.getById(userId), setupRepository.getById(setupId));
 		
 		review = this.reviewRepository.save(review);
 		
 		return reviewConverter.convertTo(review);
 	}
+	
+	@Transactional
+	public ReviewDTO deleteReview(Long reviewId) {
+		Review deletedReview = reviewRepository.getById(reviewId);
+		reviewRepository.deletedById(reviewId);//TODO
+		return reviewConverter.convertTo(deletedReview);
+	}
+	
+	
 	
 	public ReviewDTO findById(Long id) {
 		return reviewConverter. convertTo(this.reviewRepository.getById(id));
@@ -48,6 +65,8 @@ public class ReviewService {
 	public List<Review> findBySetup(Long setupId) {
 		return reviewRepository.findBySetup_SetupId(setupId);
 	}
+
+	
 	
 	
 }
