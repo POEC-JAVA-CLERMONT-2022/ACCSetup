@@ -27,11 +27,11 @@ public class ReviewService {
 		
 		review = this.reviewRepository.save(review);
 		
-		return reviewConverter.converterTo(review);
+		return reviewConverter.convertTo(review);
 	}
 	
 	public ReviewDTO findById(Long id) {
-		return reviewConverter. converterTo(this.reviewRepository.getById(id));
+		return reviewConverter. convertTo(this.reviewRepository.getById(id));
 	}
 	
 	@Transactional

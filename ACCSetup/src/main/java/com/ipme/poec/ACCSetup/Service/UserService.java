@@ -60,7 +60,7 @@ public class UserService {
         user.setUserPassword(password);
         userRepository.saveAndFlush(user);
         
-        return userConverter.converterTo(user);
+        return userConverter.convertTo(user);
     }
 
     public void saveUser(User user) {

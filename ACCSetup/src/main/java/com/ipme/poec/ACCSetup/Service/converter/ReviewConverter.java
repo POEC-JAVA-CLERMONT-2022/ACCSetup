@@ -13,7 +13,7 @@ import com.ipme.poec.ACCSetup.Service.dto.review.ReviewDTO;
 public class ReviewConverter implements DTOConverter<Review, ReviewDTO> {
 	
 	@Override
-    public ReviewDTO converterTo(Review review) {
+    public ReviewDTO convertTo(Review review) {
         ReviewDTO dto = new ReviewDTO();
 
         BeanUtils.copyProperties(review, dto);
@@ -26,7 +26,7 @@ public class ReviewConverter implements DTOConverter<Review, ReviewDTO> {
         List<ReviewDTO> dtos = new LinkedList<>();
 
         for (Review review : reviews) {
-            dtos.add(this.converterTo(review));
+            dtos.add(this.convertTo(review));
         }
 
         return dtos;

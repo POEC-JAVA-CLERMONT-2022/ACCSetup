@@ -12,7 +12,7 @@ import com.ipme.poec.ACCSetup.Service.dto.user.UserDTO;
 public class UserConverter implements DTOConverter<User, UserDTO>{
 
 	@Override
-	public UserDTO converterTo(User user) {
+	public UserDTO convertTo(User user) {
 		UserDTO dto = new UserDTO();
 		
 		return dto;
@@ -23,7 +23,7 @@ public class UserConverter implements DTOConverter<User, UserDTO>{
         List<UserDTO> dtos = new LinkedList<>();
 
         for (User user : users) {
-            dtos.add(this.converterTo(user));
+            dtos.add(this.convertTo(user));
         }
 
         return dtos;
