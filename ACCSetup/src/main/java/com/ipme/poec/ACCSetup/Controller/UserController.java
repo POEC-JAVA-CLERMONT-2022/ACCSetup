@@ -2,7 +2,8 @@ package com.ipme.poec.ACCSetup.Controller;
 
 import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Service.UserService;
-import com.ipme.poec.ACCSetup.Service.dto.UserDTO;
+import com.ipme.poec.ACCSetup.Service.dto.user.UserDTO;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

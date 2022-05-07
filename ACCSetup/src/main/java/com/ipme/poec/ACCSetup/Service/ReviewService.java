@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ipme.poec.ACCSetup.Model.Review;
-import com.ipme.poec.ACCSetup.Model.Setup;
-import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Repository.ReviewRepository;
 import com.ipme.poec.ACCSetup.Service.converter.ReviewConverter;
 import com.ipme.poec.ACCSetup.Service.dto.review.ReviewDTO;

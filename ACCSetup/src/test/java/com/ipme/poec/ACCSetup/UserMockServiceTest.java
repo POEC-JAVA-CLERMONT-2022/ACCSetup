@@ -3,7 +3,8 @@ package com.ipme.poec.ACCSetup;
 import com.ipme.poec.ACCSetup.Model.User;
 import com.ipme.poec.ACCSetup.Repository.UserRepository;
 import com.ipme.poec.ACCSetup.Service.UserService;
-import com.ipme.poec.ACCSetup.Service.dto.UserDTO;
+import com.ipme.poec.ACCSetup.Service.dto.user.UserDTO;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

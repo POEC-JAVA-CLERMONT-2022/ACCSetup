@@ -1,9 +1,11 @@
-package com.ipme.poec.ACCSetup.Service.dto;
+package com.ipme.poec.ACCSetup.Service.dto.user;
 
 
 import lombok.Data;
 
 import java.util.List;
+
+import com.ipme.poec.ACCSetup.Service.dto.SessionDTO;
 
 @Data
 public class UserDTO {
@@ -16,6 +18,9 @@ public class UserDTO {
 
     private List<SessionDTO> sessions;
 
+    public UserDTO() {
+	}
+    
     public UserDTO(int id, String name, String password, List<SessionDTO> sessions) {
         this.id = id;
         this.name = name;
@@ -23,7 +28,7 @@ public class UserDTO {
         this.sessions = sessions;
     }
 
-    public int getId() {
+	public int getId() {
         return id;
     }
 

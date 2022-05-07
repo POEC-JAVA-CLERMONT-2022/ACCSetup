@@ -1,7 +1,7 @@
 package com.ipme.poec.ACCSetup.Service.dto.review;
 
 import com.ipme.poec.ACCSetup.Service.dto.SetupDTO;
-import com.ipme.poec.ACCSetup.Service.dto.UserDTO;
+import com.ipme.poec.ACCSetup.Service.dto.user.UserDTO;
 
 public class ReviewDTO {
 	

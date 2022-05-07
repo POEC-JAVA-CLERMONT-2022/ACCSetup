@@ -5,14 +5,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
-import com.ipme.poec.ACCSetup.Service.dto.UserDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ipme.poec.ACCSetup.Model.User;
-import com.ipme.poec.ACCSetup.Repository.SessionRepository;
 import com.ipme.poec.ACCSetup.Repository.UserRepository;
+import com.ipme.poec.ACCSetup.Service.converter.UserConverter;
+import com.ipme.poec.ACCSetup.Service.dto.user.UserDTO;
+
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -25,7 +26,9 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-
+    
+    @Autowired
+	private UserConverter userConverter;
 
     public List<User> findAll() {
         return userRepository.findAll();
@@ -43,11 +46,21 @@ public class UserService {
         return userRepository.getByUserName(name);
     }
 
-    public void createUser(String name, String password) {
+//    public void createUser(String name, String password) {
+//        User user = new User();
+//        user.setUserName(name);
+//        user.setUserPassword(password);
+//        userRepository.saveAndFlush(user);
+//    }
+    
+    @Transactional
+    public UserDTO createUser(String name, String password) {
         User user = new User();
         user.setUserName(name);
         user.setUserPassword(password);
         userRepository.saveAndFlush(user);
+        
+        return userConverter.converterTo(user);
     }
 
     public void saveUser(User user) {

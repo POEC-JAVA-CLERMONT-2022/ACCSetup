@@ -2,8 +2,6 @@ package com.ipme.poec.ACCSetup.Service.dto.review;
 
 import javax.validation.constraints.NotBlank;
 
-import com.ipme.poec.ACCSetup.Model.Setup;
-import com.ipme.poec.ACCSetup.Model.User;
 
 public class CreateReviewDTO {
 	
