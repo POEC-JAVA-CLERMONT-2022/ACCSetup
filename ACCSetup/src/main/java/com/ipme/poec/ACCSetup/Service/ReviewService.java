@@ -30,28 +30,6 @@ public class ReviewService {
 	private ReviewConverter reviewConverter;
 	
 	@Transactional
-	public ReviewDTO createReview(String title, String comment, int userId, int setupId) {
-		Review review = new Review(title, comment, userRepository.getById(userId), setupRepository.getById(setupId));
-		
-		review = this.reviewRepository.save(review);
-		
-		return reviewConverter.convertTo(review);
-	}
-	
-	@Transactional
-	public ReviewDTO deleteReview(Long reviewId) {
-		Review deletedReview = reviewRepository.getById(reviewId);
-		reviewRepository.deletedById(reviewId);//TODO
-		return reviewConverter.convertTo(deletedReview);
-	}
-	
-	
-	
-	public ReviewDTO findById(Long id) {
-		return reviewConverter. convertTo(this.reviewRepository.getById(id));
-	}
-	
-	@Transactional
 	public List<Review> findAllReview() {
 		return reviewRepository.findAll();
 	}
@@ -65,8 +43,39 @@ public class ReviewService {
 	public List<Review> findBySetup(Long setupId) {
 		return reviewRepository.findBySetup_SetupId(setupId);
 	}
-
 	
+	@Transactional
+	public ReviewDTO createReview(String title, String comment, int userId, int setupId) {
+		Review review = new Review(title, comment, userRepository.getById(userId), setupRepository.getById(setupId));
+		
+		review = this.reviewRepository.save(review);
+		
+		return reviewConverter.convertTo(review);
+	}
 	
+	@Transactional
+	public ReviewDTO deleteReview(Long reviewId) {
+		Review deletedReview = reviewRepository.getById(reviewId);
+		reviewRepository.deleteById(reviewId);
+		return reviewConverter.convertTo(deletedReview);
+	}
+	
+	@Transactional
+	public ReviewDTO updateReview(String title, String comment, int userId, int setupId) {
+		Review updatedReview = new Review(
+				title,
+				comment, 
+				userRepository.getById(userId), 
+				setupRepository.getById(setupId)
+				);
+		
+		reviewRepository.save(updatedReview);
+		
+		return reviewConverter.convertTo(updatedReview);
+	}
+	
+	public ReviewDTO findById(Long id) {
+		return reviewConverter. convertTo(this.reviewRepository.getById(id));
+	}
 	
 }

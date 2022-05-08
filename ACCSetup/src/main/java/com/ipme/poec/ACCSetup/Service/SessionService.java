@@ -116,7 +116,13 @@ public class SessionService {
 //    }
 
 	public SessionDTO createSession(String sessionName, LocalDate sessionDate, int trackId, int carId, int userId) {
-		Session session = new Session(sessionName, sessionDate, trackRepository.getById(trackId), carRepository.getById(carId), userRepository.getById(userId));
+		Session session = new Session(
+				sessionName, 
+				sessionDate, 
+				trackRepository.getById(trackId), 
+				carRepository.getById(carId), 
+				userRepository.getById(userId)
+				);
 
 		sessionRepository.saveAndFlush(session);
 		

@@ -1,6 +1,5 @@
 package com.ipme.poec.ACCSetup.Controller;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +23,7 @@ public class ReviewController {
 	
 	@GetMapping
 	public List<Review> listReview() {
+		
 		return reviewService.findAllReview();
 	}
 	
@@ -34,14 +34,18 @@ public class ReviewController {
         
         return createdReview;
     }
-//TODO
-//    @PutMapping("/edit")
-//    public void updateReview(Review review, String reviewNameUpdate, LocalDate reviewDateUpdate) {
-//        reviewService.updateReview(review, reviewNameUpdate, reviewDateUpdate);
-//    }
-//TODO
+
+    @PutMapping("/edit")
+    public ReviewDTO updateReview(String title, String comment, int userId, int setupId) {
+        
+		ReviewDTO updatedReview = reviewService.updateReview(title, comment, userId, setupId);
+        
+        return updatedReview;
+    }
+	
     @DeleteMapping("/delete")
     public ReviewDTO deleteReview(Long reviewId) {
+    	
     	ReviewDTO deletedReview = reviewService.deleteReview(reviewId);
         
         return deletedReview;
