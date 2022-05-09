@@ -55,8 +55,7 @@ public class Setup {
     @JoinColumn(name = "sessionid", nullable = false)
     private Session session;
 
-    public Setup(int setupId, String setupName, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc, List<Weather> weathers, List<Condition> conditions, Session session) {
-        this.setupId = setupId;
+    public Setup(String setupName, float setupFLPsi, float setupFRPsi, float setupRLPsi, float setupRRPsi, float setupFLToe, float setupFRToe, float setupRLToe, float setupRRToe, float setupFLCamber, float setupFRCamber, float setupRLCamber, float setupRRCamber, float setupFLCaster, float setupFRCaster, String setupDesc, List<Weather> weathers, List<Condition> conditions, Session session) {
         this.setupName = setupName;
         this.setupFLPsi = setupFLPsi;
         this.setupFRPsi = setupFRPsi;
