@@ -1,6 +1,6 @@
-com\ipme\poec\ACCSetup\SessionMockServiceTest.class
-com\ipme\poec\ACCSetup\SetupTests.class
-com\ipme\poec\ACCSetup\UserTests.class
-com\ipme\poec\ACCSetup\SessionTests.class
-com\ipme\poec\ACCSetup\UserMockServiceTest.class
-com\ipme\poec\ACCSetup\SetupMockServiceTest.class
+com\ipme\poec\accsetup\SessionMockServiceTest.class
+com\ipme\poec\accsetup\SessionTests.class
+com\ipme\poec\accsetup\UserTests.class
+com\ipme\poec\accsetup\SetupMockServiceTest.class
+com\ipme\poec\accsetup\SetupTests.class
+com\ipme\poec\accsetup\UserMockServiceTest.class

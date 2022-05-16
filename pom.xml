@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>ipme.poec</groupId>
 	<artifactId>ACCSetup</artifactId>
@@ -48,6 +48,11 @@
 			<version>2.6.5</version>
 		</dependency>
 		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.5</version>
+		</dependency>
+		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>2.1.210</version>
@@ -58,14 +63,6 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 			<version>2.6.5</version>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-security</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -81,6 +78,12 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>2.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.0.0.Final</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
@@ -181,6 +184,10 @@
 			<id>clojars</id>
 			<name>Clojars</name>
 			<url>https://repo.clojars.org/</url>
+		</repository>
+		<repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
 		</repository>
 	</repositories>
 

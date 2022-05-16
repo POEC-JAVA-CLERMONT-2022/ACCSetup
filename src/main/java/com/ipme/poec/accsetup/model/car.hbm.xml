@@ -1,0 +1,14 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping
+        PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"><hibernate-mapping>
+    <class name="Car" table="car">
+        <id name="car" type="int" column="idpersonne">
+            <generator class="native"/>
+        </id>
+        <property name="nomPersonne" type="string" not-null="true" />
+        <property name="prenomPersonne" type="string" not-null="true" />
+        <property name="datenaissPersonne" type="date">
+            <meta attribute="field-description">date de naissance</meta>
+        </property>
+    </class>
+</hibernate-mapping>

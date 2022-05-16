@@ -1,21 +1,0 @@
-
-Mcom.ipme.poec.ACCSetup.Controller.TrackController#getTracks()Ljava/util/List;l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java ( "1*•
-1l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java (÷
-ô
-l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java (3
-%0-com.ipme.poec.ACCSetup.Service.SessionService"__id*I*G3
-1com.ipme.poec.ACCSetup.Controller.TrackController"
-sessionServicež›
-l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java (-
-%1java.util.List"Mcom.ipme.poec.ACCSetup.Service.SessionService#findAllTracks()Ljava/util/List;*5
-3
-%0-com.ipme.poec.ACCSetup.Service.SessionService2findAllTracks()"†
-l
-bC:/Users/PC3/Desktop/ACCSetup/src/main/java/com/ipme/poec/ACCSetup/Controller/TrackController.java (.
-
-%1java.util.ListB53
-1com.ipme.poec.ACCSetup.Controller.TrackController
